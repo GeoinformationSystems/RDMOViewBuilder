@@ -1,0 +1,815 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdmo xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <view dc:uri="https://geokur.geo.tu-dresden.de/terms/views/qa">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>qa</key>
+    <dc:comment />
+    <title lang="en">Quality Assurance</title>
+    <catalogs>
+      <catalog dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa"/>
+    </catalogs>
+    <template>
+{% load view_tags %}
+
+  &lt;h1&gt;Quality Assurance&lt;/h1&gt;
+
+  &lt;h2&gt;Prerequisites&lt;/h2&gt;
+
+  &lt;h3&gt;Data Provider: Definitions&lt;/h3&gt;
+  &lt;i&gt;The following questions refer to the definitions of Open4usage and DQ4usage. Open4usage specifies the license and the openness of the data according to &lt;a href=&quot;https://5stardata.info/en/&quot;&gt;5-star deployment scheme&lt;/a&gt;. DQ4usage sets the minimum quality criteria to be fulfilled for the usage of the data.&lt;/i&gt;
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;Define license for Open4usage.&lt;/b&gt;
+  &lt;i&gt;Define license demands of collected input datasets for further usage.&lt;br&gt;Open4usage defines the openness criteria for usage of data.&lt;/i&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  {% render_value &apos;qa/prerequisites/data_provider_definitions/open4usage_license&apos; %}
+&lt;/p&gt;
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;Define necessary Berners-Lee five stars for Open4usage.&lt;/b&gt;
+  &lt;i&gt;Define Tim Berners-Lee five stars deployment scheme for open data (see &lt;a href=&quot;https://5stardata.info/en/&quot;&gt;https://5stardata.info/en/&lt;/a&gt;).&lt;br&gt;Open4usage defines the openness criteria for usage of data.&lt;/i&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  {% render_value &apos;qa/prerequisites/data_provider_definitions/open4usage_fivestars&apos; %}
+&lt;/p&gt;
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;Define DQ4usage.&lt;/b&gt;
+  &lt;i&gt;Define the data quality level/thresholds for usage of collected input datasets.&lt;/i&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  {% render_value_list &apos;qa/prerequisites/data_provider_definitions/dq4usage&apos; %}
+&lt;/p&gt;
+
+  &lt;h3&gt;Data Curator: Definitions&lt;/h3&gt;
+  &lt;i&gt;The following questions refer to the definitions of DM4processing, DQ4processing, DM4analysis and DQ4analysis. DM4processing and DQ4processing are levels of data maturity and data quality necessary for processing the data. The data analysis requires the data maturity criteria DM4analysis and the data quality criteria DQ4analysis.&lt;/i&gt;
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;Define DM4processing.&lt;/b&gt;
+  &lt;i&gt;Define the data maturity level/thresholds for processing the datasets&lt;/i&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  {% render_value_list &apos;qa/prerequisites/data_curator_definitions/dm4processing&apos; %}
+&lt;/p&gt;
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;Define DQ4processing.&lt;/b&gt;
+  &lt;i&gt;Define the data quality level/thresholds for processing datasets.&lt;/i&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  {% render_value_list &apos;qa/prerequisites/data_curator_definitions/dq4processing&apos; %}
+&lt;/p&gt;
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;Define DM4analysis.&lt;/b&gt;
+  &lt;i&gt;Define the data maturity level/thresholds for analysing the datasets&lt;/i&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  {% render_value_list &apos;qa/prerequisites/data_curator_definitions/dm4analysis&apos; %}
+&lt;/p&gt;
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;Define DQ4analysis.&lt;/b&gt;
+  &lt;i&gt;Define the data quality level/thresholds for analysing datasets.&lt;/i&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  {% render_value_list &apos;qa/prerequisites/data_curator_definitions/dq4analysis&apos; %}
+&lt;/p&gt;
+
+  &lt;h3&gt;Data Publisher: Definitions&lt;/h3&gt;
+  &lt;i&gt;The following questions refer to the definitions of DM4publication, DQ4publication, Open4publication, DM4archiving, DQ4archiving and Open4archiving. If a dataset shall be published, it must fulfil the data maturity DM4publication, the data quality DQ4publication and the openness Open4publication (license and &lt;a href=&quot;https://5stardata.info/en/&quot;&gt;openness&lt;/a&gt;). For archiving the data the criteria are built accordingly.&lt;/i&gt;
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;Define DM4publication.&lt;/b&gt;
+  &lt;i&gt;Define the data maturity level/thresholds for publishing the datasets&lt;/i&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  {% render_value_list &apos;qa/prerequisites/data_publisher_definitions/dm4publication&apos; %}
+&lt;/p&gt;
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;Define DQ4publication.&lt;/b&gt;
+  &lt;i&gt;Define the data quality level/thresholds for publishing datasets.&lt;/i&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  {% render_value_list &apos;qa/prerequisites/data_publisher_definitions/dq4publication&apos; %}
+&lt;/p&gt;
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;Define license for Open4publication.&lt;/b&gt;
+  &lt;i&gt;Define license demands of dataset publication.&lt;br&gt;Open4publication defines the openness criteria for publishing of data.&lt;/i&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  {% render_value_list &apos;qa/prerequisites/data_publisher_definitions/open4publication_license&apos; %}
+&lt;/p&gt;
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;Define necessary Berners-Lee five stars for Open4publication.&lt;/b&gt;
+  &lt;i&gt;Define Tim Berners-Lee five stars deployment scheme for open data (see &lt;a href=&quot;https://5stardata.info/en/&quot;&gt;https://5stardata.info/en/&lt;/a&gt;).&lt;br&gt;Open4publication defines the openness criteria for publishing of data.&lt;/i&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  {% render_value_list &apos;qa/prerequisites/data_publisher_definitions/open4publication_fivestars&apos; %}
+&lt;/p&gt;
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;Define DM4archiving.&lt;/b&gt;
+  &lt;i&gt;Define the data maturity level/thresholds for archiving the datasets&lt;/i&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  {% render_value_list &apos;qa/prerequisites/data_publisher_definitions/dm4archiving&apos; %}
+&lt;/p&gt;
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;Define DQ4archiving.&lt;/b&gt;
+  &lt;i&gt;Define the data quality level/thresholds for archiving datasets.&lt;/i&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  {% render_value_list &apos;qa/prerequisites/data_publisher_definitions/dq4archiving&apos; %}
+&lt;/p&gt;
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;Define license for Open4archiving.&lt;/b&gt;
+  &lt;i&gt;Define license demands of dataset archiving.&lt;br&gt;Open4archiving defines the openness criteria for archiving of data.&lt;/i&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  {% render_value_list &apos;qa/prerequisites/data_publisher_definitions/open4archiving_license&apos; %}
+&lt;/p&gt;
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;Define necessary Berners-Lee five stars for Open4archiving.&lt;/b&gt;
+  &lt;i&gt;Define Tim Berners-Lee five stars deployment scheme for open data (see &lt;a href=&quot;https://5stardata.info/en/&quot;&gt;https://5stardata.info/en/&lt;/a&gt;).&lt;br&gt;Open4archiving defines the openness criteria for archiving of data.&lt;/i&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  {% render_value_list &apos;qa/prerequisites/data_publisher_definitions/open4archiving_fivestars&apos; %}
+&lt;/p&gt;
+
+  &lt;h2&gt;Collection Phase&lt;/h2&gt;
+
+  &lt;h3&gt;Data Provider: Collect Data&lt;/h3&gt;
+  &lt;i&gt;The collection of data is the first step in the data life cycle. Please specify one or multiple datasets to be collected. A dataset is not necessarily one file only. It is possible and advised to aggregate similar types of input data if they share general properties (e.g. source, license)&lt;/i&gt;
+
+{% get_set &apos;qa/collectionPhase/collectData&apos; as collectData_all %}
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;How and where do you collect data?&lt;/b&gt;
+  &lt;i&gt;Describe the sources of collected data. Possible sources are repositories, public authorities, project partners, or own measurements/observations.&lt;/i&gt;
+&lt;/p&gt;
+{% for collectData in collectData_all %}
+&lt;p&gt;
+  &lt;i&gt;collectData {{ collectData.value }}:&lt;/i&gt;
+  {% render_set_value_list collectData &apos;qa/collectionPhase/collectData/collectionOfData&apos; %}
+&lt;/p&gt;
+{% endfor %}
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;Is the openness for data usage according to Open4usage criteria ensured?&lt;/b&gt;
+  &lt;i&gt;The collected dataset must be usable as defined in Open4usage. If the license does not allow usage, the dataset must be omitted.&lt;/i&gt;
+&lt;/p&gt;
+{% for collectData in collectData_all %}
+&lt;p&gt;
+  &lt;i&gt;collectData {{ collectData.value }}:&lt;/i&gt;
+  {% render_set_value_list collectData &apos;qa/collectionPhase/collectData/collectionOfDataOpenness&apos; %}
+&lt;/p&gt;
+{% endfor %}
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;Is the data quality for data usage ensured?&lt;/b&gt;
+  &lt;i&gt;The quality of the dataset must fulfil DQ4usage criteria. If the quality is not sufficient, the dataset must be omitted.&lt;/i&gt;
+&lt;/p&gt;
+{% for collectData in collectData_all %}
+&lt;p&gt;
+  &lt;i&gt;collectData {{ collectData.value }}:&lt;/i&gt;
+  {% render_set_value_list collectData &apos;qa/collectionPhase/collectData/collectionOfDataDataQuality&apos; %}
+&lt;/p&gt;
+{% endfor %}
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;Is metadata available?&lt;/b&gt;
+  &lt;i&gt;If metadata (data about data) is available, it can be used to a better understanding of the dataset. often it is crucial for further usage of the dataset.&lt;/i&gt;
+&lt;/p&gt;
+{% for collectData in collectData_all %}
+&lt;p&gt;
+  &lt;i&gt;collectData {{ collectData.value }}:&lt;/i&gt;
+  {% render_set_value_list collectData &apos;qa/collectionPhase/collectData/collectionOfDataMetadata&apos; %}
+&lt;/p&gt;
+{% endfor %}
+
+  &lt;h3&gt;Data Provider: Metadata Usage&lt;/h3&gt;
+  &lt;i&gt;Often the existing metadata must be complemented by metadata elements that are necessary for further usage of the data after the collection phase. Metadata includes general elements, domain specifiv elements, and data quality.&lt;/i&gt;
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;Is it possible to extract further metadata (possibly automatically)?&lt;/b&gt;
+  &lt;i&gt;Metadata Extraction&lt;/i&gt;
+&lt;/p&gt;
+{% for collectData in collectData_all %}
+&lt;p&gt;
+  &lt;i&gt;collectData {{ collectData.value }}:&lt;/i&gt;
+  {% render_set_value_list collectData &apos;qa/collectionPhase/metadataUsage/metadataExtraction&apos; %}
+&lt;/p&gt;
+{% endfor %}
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;Is it possible to extract further data quality (possibly automatically)?&lt;/b&gt;
+  &lt;i&gt;Data Quality Extraction&lt;/i&gt;
+&lt;/p&gt;
+{% for collectData in collectData_all %}
+&lt;p&gt;
+  &lt;i&gt;collectData {{ collectData.value }}:&lt;/i&gt;
+  {% render_set_value_list collectData &apos;qa/collectionPhase/metadataUsage/dataQualityExtraction&apos; %}
+&lt;/p&gt;
+{% endfor %}
+
+  &lt;h3&gt;Data Curator: Metadata Enriching&lt;/h3&gt;
+  &lt;i&gt;The data curator can potentially enrich the metadata by additional elements. This is mostly done manually.&lt;/i&gt;
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;Can the metadata/data quality be enriched?&lt;/b&gt;
+  &lt;i&gt;If the initial set of metadata does not fulfil project needs additional metadata and data quality measures must be added.&lt;/i&gt;
+&lt;/p&gt;
+{% for collectData in collectData_all %}
+&lt;p&gt;
+  &lt;i&gt;collectData {{ collectData.value }}:&lt;/i&gt;
+  {% render_set_value_list collectData &apos;qa/collectionPhase/metadataEnriching/enrichMetadataYesNo&apos; %}
+&lt;/p&gt;
+{% endfor %}
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;How can metadata be enriched? What fields do you plan to add?&lt;/b&gt;
+  &lt;i&gt;Describe the additional metadata fields and/or data quality measures that have to be included in order to fulfil project needs. The DQ4processing is an appropriate guideline here.&lt;/i&gt;
+&lt;/p&gt;
+{% for collectData in collectData_all %}
+&lt;p&gt;
+  &lt;i&gt;collectData {{ collectData.value }}:&lt;/i&gt;
+  {% render_set_value_list collectData &apos;qa/collectionPhase/metadataEnriching/enrichMetadata&apos; %}
+&lt;/p&gt;
+{% endfor %}
+
+  &lt;h3&gt;Data Curator: Quality Control&lt;/h3&gt;
+  &lt;i&gt;The quality control step plays an important role in the quality assurance workflow. Several phases of the data life cycle can benefit from quality control. Therefore a careful decision must be made.&lt;/i&gt;
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;Is an intermediate quality control necessary?&lt;/b&gt;
+  &lt;i&gt;An intermediate quality control step is especially useful, if the input data is derived from own measurements. If such data shall be published directly, a quality control is recommended. Apart from self-measured data a quality control step is advised for data in impact research.&lt;/i&gt;
+&lt;/p&gt;
+{% for collectData in collectData_all %}
+&lt;p&gt;
+  &lt;i&gt;collectData {{ collectData.value }}:&lt;/i&gt;
+  {% render_set_value_list collectData &apos;qa/collectionPhase/qualityControl/qualityControlDecision&apos; %}
+&lt;/p&gt;
+{% endfor %}
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;Describe the method for quality control of this dataset.&lt;/b&gt;
+  &lt;i&gt;A quality control can consist of different methods depending on data type, potential usage, target community. DQ4processing is an appropriate guideline here.&lt;/i&gt;
+&lt;/p&gt;
+{% for collectData in collectData_all %}
+&lt;p&gt;
+  &lt;i&gt;collectData {{ collectData.value }}:&lt;/i&gt;
+  {% render_set_value_list collectData &apos;qa/collectionPhase/qualityControl/qualityControlMethod&apos; %}
+&lt;/p&gt;
+{% endfor %}
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;Which methods/indicators are used to evaluate the fitness for purpose/use using the results of the quality control?&lt;/b&gt;
+  &lt;i&gt;Fitness for purpose (utility) and fitness for use (warranty) depict important goals of a dataset to be potentially reused.&lt;/i&gt;
+&lt;/p&gt;
+{% for collectData in collectData_all %}
+&lt;p&gt;
+  &lt;i&gt;collectData {{ collectData.value }}:&lt;/i&gt;
+  {% render_set_value_list collectData &apos;qa/collectionPhase/qualityControl/evaluateFitnessForPurposeMethod&apos; %}
+&lt;/p&gt;
+{% endfor %}
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;Describe the results of the evaluation of fitness for purpose/use.&lt;/b&gt;
+&lt;/p&gt;
+{% for collectData in collectData_all %}
+&lt;p&gt;
+  &lt;i&gt;collectData {{ collectData.value }}:&lt;/i&gt;
+  {% render_set_value_list collectData &apos;qa/collectionPhase/qualityControl/evaluateFitnessForPurposeResult&apos; %}
+&lt;/p&gt;
+{% endfor %}
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;Are the indicators or other results from fitness for purpose/use included in the metadata?&lt;/b&gt;
+  &lt;i&gt;To foster potential usage of the data the inclusion of indicators and/or other results is strongly recommended.&lt;/i&gt;
+&lt;/p&gt;
+{% for collectData in collectData_all %}
+&lt;p&gt;
+  &lt;i&gt;collectData {{ collectData.value }}:&lt;/i&gt;
+  {% render_set_value_list collectData &apos;qa/collectionPhase/qualityControl/evaluateFitnessForPurposeInMetadata&apos; %}
+&lt;/p&gt;
+{% endfor %}
+
+  &lt;h3&gt;Data Curator: Data Maturity Handling&lt;/h3&gt;
+  &lt;i&gt;The data maturity is an important concept of data meeting the usage requirements. For the next phase the data must reach level 2 data maturity.&lt;/i&gt;
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;Did you evaluate the data maturity of datasets in collection phase?&lt;/b&gt;
+  &lt;i&gt;The data maturity&apos;s evaluation follows the DM4processing criteria in the data maturity matrix. If the dataset shall be published without processing/analyse phases, DM4publication must be fulfilled.&lt;/i&gt;
+&lt;/p&gt;
+{% for collectData in collectData_all %}
+&lt;p&gt;
+  &lt;i&gt;collectData {{ collectData.value }}:&lt;/i&gt;
+  {% render_set_value_list collectData &apos;qa/collectionPhase/dataMaturityHandling/dataMaturityEvaluation&apos; %}
+&lt;/p&gt;
+{% endfor %}
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;Did you include the level of data maturity in the metadata?&lt;/b&gt;
+  &lt;i&gt;To foster potential usage of the data the inclusion of data maturity indicators is strongly recommended.&lt;/i&gt;
+&lt;/p&gt;
+{% for collectData in collectData_all %}
+&lt;p&gt;
+  &lt;i&gt;collectData {{ collectData.value }}:&lt;/i&gt;
+  {% render_set_value_list collectData &apos;qa/collectionPhase/dataMaturityHandling/dataMaturityEvaluationInMetadata&apos; %}
+&lt;/p&gt;
+{% endfor %}
+
+  &lt;h3&gt;Data Curator: Next Steps&lt;/h3&gt;
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;Give an estimation of data maturity and data quality indicators for all input datasets.&lt;/b&gt;
+  &lt;i&gt;In the case of proceeding to processing phase, DM4processing and DQ4processing must be fulfilled. If the data shall be directly published (e.g. own measurements) DM4publication and DQ4publication must be met.&lt;/i&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  {% render_value_list &apos;qa/collectionPhase/nextSteps/DMDQIndicators&apos; %}
+&lt;/p&gt;
+
+  &lt;h2&gt;Processing Phase&lt;/h2&gt;
+
+  &lt;h3&gt;Data Provider: Process Data&lt;/h3&gt;
+  &lt;i&gt;The processing of data is the second step in the data life cycle. Please specify one or multiple datasets to be processed. The same datasets will be used for the analysing phase. A dataset is not necessarily one file only. It is possible and advised to aggregate similar types of data to be processed and analysed if they share general properties (e.g. topic, type)&lt;/i&gt;
+
+{% get_set &apos;qa/processingPhase/processData&apos; as processData_all %}
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;Describe the data processing.&lt;/b&gt;
+  &lt;i&gt;Describe the model workflow you create/develop. The single steps depending on the supposed granularity should be mentioned here. Also include the used input datasets according to the collection phase here.&lt;/i&gt;
+&lt;/p&gt;
+{% for processData in processData_all %}
+&lt;p&gt;
+  &lt;i&gt;processData {{ processData.value }}:&lt;/i&gt;
+  {% render_set_value_list processData &apos;qa/processingPhase/processData/processingOfData&apos; %}
+&lt;/p&gt;
+{% endfor %}
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;Is it possible to extract metadata from the produced dataset?&lt;/b&gt;
+  &lt;i&gt;The extraction of metadata can either be made manually or automatically (if possible).&lt;/i&gt;
+&lt;/p&gt;
+{% for processData in processData_all %}
+&lt;p&gt;
+  &lt;i&gt;processData {{ processData.value }}:&lt;/i&gt;
+  {% render_set_value_list processData &apos;qa/processingPhase/processData/metadataExtraction&apos; %}
+&lt;/p&gt;
+{% endfor %}
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;Is it possible to extract data quality measures from the produced dataset?&lt;/b&gt;
+  &lt;i&gt;The extraction of data quality can either be made manually or automatically (if possible). The choice of data quality measures shall follow domain specific rules.&lt;/i&gt;
+&lt;/p&gt;
+{% for processData in processData_all %}
+&lt;p&gt;
+  &lt;i&gt;processData {{ processData.value }}:&lt;/i&gt;
+  {% render_set_value_list processData &apos;qa/processingPhase/processData/dataQualityExtraction&apos; %}
+&lt;/p&gt;
+{% endfor %}
+
+  &lt;h3&gt;Data Curator: Metadata Enriching&lt;/h3&gt;
+  &lt;i&gt;The data curator can potentially enrich the metadata by additional elements. This is mostly done manually.&lt;/i&gt;
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;Can the metadata/data quality be enriched?&lt;/b&gt;
+  &lt;i&gt;If the initial set of metadata does not fulfil project needs additional metadata and data quality measures must be added.&lt;/i&gt;
+&lt;/p&gt;
+{% for processData in processData_all %}
+&lt;p&gt;
+  &lt;i&gt;processData {{ processData.value }}:&lt;/i&gt;
+  {% render_set_value_list processData &apos;qa/processingPhase/metadataEnriching/enrichMetadataYesNo&apos; %}
+&lt;/p&gt;
+{% endfor %}
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;How can metadata and data quality be enriched? What fields/elements do you plan to add?&lt;/b&gt;
+  &lt;i&gt;Describe the additional metadata fields and/or data quality measures that have to be included in order to fulfil project needs. The DQ4analysis is an appropriate guideline here.&lt;/i&gt;
+&lt;/p&gt;
+{% for processData in processData_all %}
+&lt;p&gt;
+  &lt;i&gt;processData {{ processData.value }}:&lt;/i&gt;
+  {% render_set_value_list processData &apos;qa/processingPhase/metadataEnriching/enrichMetadata&apos; %}
+&lt;/p&gt;
+{% endfor %}
+
+  &lt;h3&gt;Data Curator: Quality Control&lt;/h3&gt;
+  &lt;i&gt;The quality control step plays an important role in the quality assurance workflow. Several phases of the data life cycle can benefit from quality control. Therefore a careful decision must be made.&lt;/i&gt;
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;Is an intermediate quality control advised?&lt;/b&gt;
+  &lt;i&gt;A quality control at this step should include basic tests to ensure the basic functionality and characteristics of this dataset to be used in further steps.&lt;/i&gt;
+&lt;/p&gt;
+{% for processData in processData_all %}
+&lt;p&gt;
+  &lt;i&gt;processData {{ processData.value }}:&lt;/i&gt;
+  {% render_set_value_list processData &apos;qa/processingPhase/qualityControl/qualityControlDecision&apos; %}
+&lt;/p&gt;
+{% endfor %}
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;Describe the method for quality control of this dataset.&lt;/b&gt;
+  &lt;i&gt;A quality control can consist of different methods depending on data type, potential usage, target community. DQ4analysis is an appropriate guideline here.&lt;/i&gt;
+&lt;/p&gt;
+{% for processData in processData_all %}
+&lt;p&gt;
+  &lt;i&gt;processData {{ processData.value }}:&lt;/i&gt;
+  {% render_set_value_list processData &apos;qa/processingPhase/qualityControl/qualityControlMethod&apos; %}
+&lt;/p&gt;
+{% endfor %}
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;Which methods/indicators are used to evaluate the fitness for analysis using the results of the quality control?&lt;/b&gt;
+  &lt;i&gt;Fitness for analysis examines the potential usage of this dataset in further steps in the data life cycle.&lt;/i&gt;
+&lt;/p&gt;
+{% for processData in processData_all %}
+&lt;p&gt;
+  &lt;i&gt;processData {{ processData.value }}:&lt;/i&gt;
+  {% render_set_value_list processData &apos;qa/processingPhase/qualityControl/evaluateFitnessForAnalysis&apos; %}
+&lt;/p&gt;
+{% endfor %}
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;Describe the results of the evaluation of fitness for purpose/use.&lt;/b&gt;
+&lt;/p&gt;
+{% for processData in processData_all %}
+&lt;p&gt;
+  &lt;i&gt;processData {{ processData.value }}:&lt;/i&gt;
+  {% render_set_value_list processData &apos;qa/processingPhase/qualityControl/evaluateFitnessForPurposeResult&apos; %}
+&lt;/p&gt;
+{% endfor %}
+
+  &lt;h3&gt;Data Curator: Data Maturity Handling&lt;/h3&gt;
+  &lt;i&gt;The data maturity is an important concept of data meeting the usage requirements. For the next phase the data must reach level 3 data maturity.&lt;/i&gt;
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;Did you evaluate the data maturity of datasets in processing phase?&lt;/b&gt;
+  &lt;i&gt;The data maturity&apos;s evaluation follows the DM4analysis criteria in the data maturity matrix.&lt;/i&gt;
+&lt;/p&gt;
+{% for processData in processData_all %}
+&lt;p&gt;
+  &lt;i&gt;processData {{ processData.value }}:&lt;/i&gt;
+  {% render_set_value_list processData &apos;qa/processingPhase/dataMaturityHandling/dataMaturityEvaluation&apos; %}
+&lt;/p&gt;
+{% endfor %}
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;Did you include the level of data maturity in the metadata?&lt;/b&gt;
+  &lt;i&gt;To foster potential usage of the data the inclusion of data maturity indicators is strongly recommended.&lt;/i&gt;
+&lt;/p&gt;
+{% for processData in processData_all %}
+&lt;p&gt;
+  &lt;i&gt;processData {{ processData.value }}:&lt;/i&gt;
+  {% render_set_value_list processData &apos;qa/processingPhase/dataMaturityHandling/dataMaturityEvaluationInMetadata&apos; %}
+&lt;/p&gt;
+{% endfor %}
+
+  &lt;h3&gt;Data Curator: Next Steps&lt;/h3&gt;
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;Give an estimation of data maturity and data quality indicators for all processed datasets.&lt;/b&gt;
+  &lt;i&gt;In order to proceed to the analysis phase DM4analysis and DQ4analysis must be fulfilled.&lt;/i&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  {% render_value_list &apos;qa/processingPhase/nextSteps/DMDQIndicators&apos; %}
+&lt;/p&gt;
+
+  &lt;h2&gt;Analysis Phase&lt;/h2&gt;
+
+  &lt;h3&gt;Data Provider: Analyse Data&lt;/h3&gt;
+  &lt;i&gt;The analysis of data is the third step in the data life cycle. The datasets here are the same like in the processing phase. A dataset is not necessarily one file only. It is possible and advised to aggregate similar types of data to be processed and analysed if they share general properties (e.g. topic, type)&lt;/i&gt;
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;Describe the data analysis.&lt;/b&gt;
+  &lt;i&gt;Describe the planned analysis of the dataset. The analysis shall examine the data in depth. This is a reasonable basis for further usage of the data.&lt;/i&gt;
+&lt;/p&gt;
+{% for processData in processData_all %}
+&lt;p&gt;
+  &lt;i&gt;processData {{ processData.value }}:&lt;/i&gt;
+  {% render_set_value_list processData &apos;qa/analysisPhase/analyseData/analysisOfData&apos; %}
+&lt;/p&gt;
+{% endfor %}
+
+  &lt;h3&gt;Data Curator: Fitness for Purpose/Use&lt;/h3&gt;
+  &lt;i&gt;The fitness for purpose (utility) and use (warranty) are general properties of the data. In the analysis phase they should be evaluated in order to assess the usability of the data for own purposes as well as further usage in other research projects/communities.&lt;/i&gt;
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;How can you evaluate the fitness for purpose/use of the data?&lt;/b&gt;
+  &lt;i&gt;The evaluation of the fitness for purpose/use is an important step in the analysis phase. &lt;/i&gt;
+&lt;/p&gt;
+{% for processData in processData_all %}
+&lt;p&gt;
+  &lt;i&gt;processData {{ processData.value }}:&lt;/i&gt;
+  {% render_set_value_list processData &apos;qa/analysisPhase/evaluateFitnessForPurpose/evaluateFitnessForPurpose&apos; %}
+&lt;/p&gt;
+{% endfor %}
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;Are indicators/descriptions of fitness for purpose/use included in metadata?&lt;/b&gt;
+  &lt;i&gt;To foster potential usage of the data the inclusion of indicators and/or other results and descriptions is strongly recommended.&lt;/i&gt;
+&lt;/p&gt;
+{% for processData in processData_all %}
+&lt;p&gt;
+  &lt;i&gt;processData {{ processData.value }}:&lt;/i&gt;
+  {% render_set_value_list processData &apos;qa/analysisPhase/evaluateFitnessForPurpose/evaluateFitnessForPurposeInMetadata&apos; %}
+&lt;/p&gt;
+{% endfor %}
+
+  &lt;h3&gt;Data Curator: Quality Control&lt;/h3&gt;
+  &lt;i&gt;The quality control step plays an important role in the quality assurance workflow. Several phases of the data life cycle can benefit from quality control. Therefore a careful decision must be made.&lt;/i&gt;
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;Is a quality control advised?&lt;/b&gt;
+  &lt;i&gt;A quality control at this step is typically necessary. It is a quantified proof of your data.&lt;/i&gt;
+&lt;/p&gt;
+{% for processData in processData_all %}
+&lt;p&gt;
+  &lt;i&gt;processData {{ processData.value }}:&lt;/i&gt;
+  {% render_set_value_list processData &apos;qa/analysisPhase/qualityControl/qualityControlDecision&apos; %}
+&lt;/p&gt;
+{% endfor %}
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;Describe the method for quality control of this dataset.&lt;/b&gt;
+  &lt;i&gt;A quality control can consist of different methods depending on data type, potential usage, target community. DQ4publication is an appropriate guideline here.&lt;/i&gt;
+&lt;/p&gt;
+{% for processData in processData_all %}
+&lt;p&gt;
+  &lt;i&gt;processData {{ processData.value }}:&lt;/i&gt;
+  {% render_set_value_list processData &apos;qa/analysisPhase/qualityControl/qualityControlMethod&apos; %}
+&lt;/p&gt;
+{% endfor %}
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;Which methods/indicators are used to evaluate the fitness for publication using the results of the quality control?&lt;/b&gt;
+  &lt;i&gt;Fitness for publication examines the potential usage of this dataset in further steps in the data life cycle.&lt;/i&gt;
+&lt;/p&gt;
+{% for processData in processData_all %}
+&lt;p&gt;
+  &lt;i&gt;processData {{ processData.value }}:&lt;/i&gt;
+  {% render_set_value_list processData &apos;qa/analysisPhase/qualityControl/evaluateFitnessForPublication&apos; %}
+&lt;/p&gt;
+{% endfor %}
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;Describe the results of the evaluation of fitness for purpose/use.&lt;/b&gt;
+&lt;/p&gt;
+{% for processData in processData_all %}
+&lt;p&gt;
+  &lt;i&gt;processData {{ processData.value }}:&lt;/i&gt;
+  {% render_set_value_list processData &apos;qa/analysisPhase/qualityControl/evaluateFitnessForPurposeResult&apos; %}
+&lt;/p&gt;
+{% endfor %}
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;Are the indicators or other results from fitness for purpose/use included in the metadata?&lt;/b&gt;
+  &lt;i&gt;To foster potential usage of the data the inclusion of indicators and/or other results is strongly recommended.&lt;/i&gt;
+&lt;/p&gt;
+{% for processData in processData_all %}
+&lt;p&gt;
+  &lt;i&gt;processData {{ processData.value }}:&lt;/i&gt;
+  {% render_set_value_list processData &apos;qa/analysisPhase/qualityControl/evaluateFitnessForPurposeInMetadata&apos; %}
+&lt;/p&gt;
+{% endfor %}
+
+  &lt;h3&gt;Data Curator: Data Maturity Handling&lt;/h3&gt;
+  &lt;i&gt;The data maturity is an important concept of data meeting the usage requirements. For the next phase the data must reach level 4 data maturity.&lt;/i&gt;
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;Did you evaluate the data maturity of datasets in analysis phase?&lt;/b&gt;
+  &lt;i&gt;The data maturity&apos;s evaluation follows the DM4publication criteria in the data maturity matrix.&lt;/i&gt;
+&lt;/p&gt;
+{% for processData in processData_all %}
+&lt;p&gt;
+  &lt;i&gt;processData {{ processData.value }}:&lt;/i&gt;
+  {% render_set_value_list processData &apos;qa/analysisPhase/dataMaturityHandling/dataMaturityEvaluation&apos; %}
+&lt;/p&gt;
+{% endfor %}
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;Did you include the level of data maturity in the metadata?&lt;/b&gt;
+  &lt;i&gt;To foster potential usage of the data the inclusion of data maturity indicators is strongly recommended.&lt;/i&gt;
+&lt;/p&gt;
+{% for processData in processData_all %}
+&lt;p&gt;
+  &lt;i&gt;processData {{ processData.value }}:&lt;/i&gt;
+  {% render_set_value_list processData &apos;qa/analysisPhase/dataMaturityHandling/dataMaturityEvaluationInMetadata&apos; %}
+&lt;/p&gt;
+{% endfor %}
+
+  &lt;h3&gt;Data Curator: Next Steps&lt;/h3&gt;
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;Give an estimation of data maturity and data quality indicators for all analysed datasets.&lt;/b&gt;
+  &lt;i&gt;In order to proceed to the publication phase DM4publication and DQ4publication must be fulfilled.&lt;/i&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  {% render_value_list &apos;qa/analysisPhase/nextSteps/DMDQIndicators&apos; %}
+&lt;/p&gt;
+
+  &lt;h2&gt;Publication Phase&lt;/h2&gt;
+
+  &lt;h3&gt;Data Publisher: Publish Data&lt;/h3&gt;
+  &lt;i&gt;The publication of data is the fourth step in the data life cycle. The same datasets are used for publication and archiving phases. A dataset is not necessarily one file only. It is possible and advised to aggregate similar types of data to be publication and/or archived if they share general properties (e.g. topic, type)&lt;/i&gt;
+
+{% get_set &apos;qa/publicationPhase/publishData&apos; as publishData_all %}
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;Is Open4publication ensured?&lt;/b&gt;
+  &lt;i&gt;Ensured Open4publication is mandatory for publishing the dataset.&lt;/i&gt;
+&lt;/p&gt;
+{% for publishData in publishData_all %}
+&lt;p&gt;
+  &lt;i&gt;publishData {{ publishData.value }}:&lt;/i&gt;
+  {% render_set_value_list publishData &apos;qa/publicationPhase/publishData/open4publication&apos; %}
+&lt;/p&gt;
+{% endfor %}
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;How and where do you publish the dataset?&lt;/b&gt;
+  &lt;i&gt;The way of publication defines necessary metadata fields and file formats.&lt;/i&gt;
+&lt;/p&gt;
+{% for publishData in publishData_all %}
+&lt;p&gt;
+  &lt;i&gt;publishData {{ publishData.value }}:&lt;/i&gt;
+  {% render_set_value_list publishData &apos;qa/publicationPhase/publishData/publicationOfDataDescription&apos; %}
+&lt;/p&gt;
+{% endfor %}
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;Describe the necessary adaption of metadata elements.&lt;/b&gt;
+  &lt;i&gt;Publication of datasets in repositories often leads to repository-specific metadata elements.&lt;/i&gt;
+&lt;/p&gt;
+{% for publishData in publishData_all %}
+&lt;p&gt;
+  &lt;i&gt;publishData {{ publishData.value }}:&lt;/i&gt;
+  {% render_set_value_list publishData &apos;qa/publicationPhase/publishData/metadataAdaptionYesno&apos; %}
+&lt;/p&gt;
+{% endfor %}
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;Did you adapt metadata elements?&lt;/b&gt;
+  &lt;i&gt;Is the adaption of metadata elements according to the specific needs of the repository finished?&lt;/i&gt;
+&lt;/p&gt;
+{% for publishData in publishData_all %}
+&lt;p&gt;
+  &lt;i&gt;publishData {{ publishData.value }}:&lt;/i&gt;
+  {% render_set_value_list publishData &apos;qa/publicationPhase/publishData/metadataAdaption&apos; %}
+&lt;/p&gt;
+{% endfor %}
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;Did you publish the dataset?&lt;/b&gt;
+&lt;/p&gt;
+{% for publishData in publishData_all %}
+&lt;p&gt;
+  &lt;i&gt;publishData {{ publishData.value }}:&lt;/i&gt;
+  {% render_set_value_list publishData &apos;qa/publicationPhase/publishData/publicationOfData&apos; %}
+&lt;/p&gt;
+{% endfor %}
+
+  &lt;h3&gt;Data Publisher: Next Steps&lt;/h3&gt;
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;Give an estimation of data maturity and data quality indicators for all analysed datasets.&lt;/b&gt;
+  &lt;i&gt;In order to proceed to the archiving phase DM4archiving and DQ4archiving must be fulfilled.&lt;/i&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  {% render_value_list &apos;qa/publicationPhase/nextSteps/DMDQIndicators&apos; %}
+&lt;/p&gt;
+
+  &lt;h2&gt;Archiving Phase&lt;/h2&gt;
+
+  &lt;h3&gt;Data Publisher: Archive Data&lt;/h3&gt;
+  &lt;i&gt;The archiving of data is the fifth step in the data life cycle. The same datasets are used for publication and archiving phases. A dataset is not necessarily one file only. It is possible and advised to aggregate similar types of data to be publication and/or archived if they share general properties (e.g. topic, type)&lt;/i&gt;
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;Is Open4archiving ensured?&lt;/b&gt;
+  &lt;i&gt;Ensured Open4archiving is mandatory for publishing the dataset.&lt;/i&gt;
+&lt;/p&gt;
+{% for publishData in publishData_all %}
+&lt;p&gt;
+  &lt;i&gt;publishData {{ publishData.value }}:&lt;/i&gt;
+  {% render_set_value_list publishData &apos;qa/archivingPhase/archiveData/open4archiving&apos; %}
+&lt;/p&gt;
+{% endfor %}
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;How and where do you archive the dataset?&lt;/b&gt;
+  &lt;i&gt;The way of archiving defines necessary metadata fields and file formats.&lt;/i&gt;
+&lt;/p&gt;
+{% for publishData in publishData_all %}
+&lt;p&gt;
+  &lt;i&gt;publishData {{ publishData.value }}:&lt;/i&gt;
+  {% render_set_value_list publishData &apos;qa/archivingPhase/archiveData/archivingOfDataDescription&apos; %}
+&lt;/p&gt;
+{% endfor %}
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;Describe the necessary adaption of metadata elements.&lt;/b&gt;
+  &lt;i&gt;Archiving of datasets in repositories often leads to repository-specific metadata elements.&lt;/i&gt;
+&lt;/p&gt;
+{% for publishData in publishData_all %}
+&lt;p&gt;
+  &lt;i&gt;publishData {{ publishData.value }}:&lt;/i&gt;
+  {% render_set_value_list publishData &apos;qa/archivingPhase/archiveData/metadataAdaptionYesno&apos; %}
+&lt;/p&gt;
+{% endfor %}
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;Did you adapt metadata elements?&lt;/b&gt;
+  &lt;i&gt;Is the adaption of metadata elements according to the specific needs of the repository finished?&lt;/i&gt;
+&lt;/p&gt;
+{% for publishData in publishData_all %}
+&lt;p&gt;
+  &lt;i&gt;publishData {{ publishData.value }}:&lt;/i&gt;
+  {% render_set_value_list publishData &apos;qa/archivingPhase/archiveData/metadataAdaption&apos; %}
+&lt;/p&gt;
+{% endfor %}
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;Did you archive the dataset?&lt;/b&gt;
+&lt;/p&gt;
+{% for publishData in publishData_all %}
+&lt;p&gt;
+  &lt;i&gt;publishData {{ publishData.value }}:&lt;/i&gt;
+  {% render_set_value_list publishData &apos;qa/archivingPhase/archiveData/archivingOfData&apos; %}
+&lt;/p&gt;
+{% endfor %}
+    </template>
+  </view>
+</rdmo>

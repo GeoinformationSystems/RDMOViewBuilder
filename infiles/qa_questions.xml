@@ -1,0 +1,2263 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rdmo xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <catalog dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>qa</key>
+    <dc:comment/>
+    <order>0</order>
+    <title lang="en">Quality Assurance</title>
+  </catalog>
+  <section dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/prerequisites">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>prerequisites</key>
+    <path>qa/prerequisites</path>
+    <dc:comment/>
+    <catalog dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa"/>
+    <order>0</order>
+    <title lang="en">Prerequisites</title>
+  </section>
+  <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/prerequisites/data_provider_definitions">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>data_provider_definitions</key>
+    <path>qa/prerequisites/data_provider_definitions</path>
+    <dc:comment/>
+    <attribute/>
+    <section dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/prerequisites"/>
+    <is_collection>False</is_collection>
+    <order>0</order>
+    <title lang="en">Data Provider: Definitions</title>
+    <help lang="en">The following questions refer to the definitions of Open4usage and DQ4usage. Open4usage specifies the license and the openness of the data according to &lt;a href="https://5stardata.info/en/"&gt;5-star deployment scheme&lt;/a&gt;. DQ4usage sets the minimum quality criteria to be fulfilled for the usage of the data.</help>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <conditions/>
+  </questionset>
+  <question dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/prerequisites/data_provider_definitions/open4usage_license">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>open4usage_license</key>
+    <path>qa/prerequisites/data_provider_definitions/open4usage_license</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/prerequisites/data_provider_definitions/open4usage_license"/>
+    <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/prerequisites/data_provider_definitions"/>
+    <is_collection>False</is_collection>
+    <is_optional>False</is_optional>
+    <order>0</order>
+    <help lang="en">Define license demands of collected input datasets for further usage.&lt;br&gt;Open4usage defines the openness criteria for usage of data.</help>
+    <text lang="en">Define license for Open4usage.</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <widget_type>textarea</widget_type>
+    <value_type>text</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions/>
+    <default_external_id/>
+  </question>
+  <question dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/prerequisites/data_provider_definitions/open4usage_fivestars">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>open4usage_fivestars</key>
+    <path>qa/prerequisites/data_provider_definitions/open4usage_fivestars</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/prerequisites/data_provider_definitions/open4usage_fivestars"/>
+    <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/prerequisites/data_provider_definitions"/>
+    <is_collection>False</is_collection>
+    <is_optional>False</is_optional>
+    <order>1</order>
+    <help lang="en">Define Tim Berners-Lee five stars deployment scheme for open data (see &lt;a href="https://5stardata.info/en/"&gt;https://5stardata.info/en/&lt;/a&gt;).&lt;br&gt;Open4usage defines the openness criteria for usage of data.</help>
+    <text lang="en">Define necessary Berners-Lee five stars for Open4usage.</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <widget_type>radio</widget_type>
+    <value_type>option</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets>
+      <optionset dc:uri="https://geokur.geo.tu-dresden.de/terms/options/five_stars_open_data"/>
+    </optionsets>
+    <default_option/>
+    <conditions>
+      <condition dc:uri="https://geokur.geo.tu-dresden.de/terms/conditions/pr_open4usage_license_defined"/>
+    </conditions>
+    <default_external_id/>
+  </question>
+  <question dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/prerequisites/data_provider_definitions/dq4usage">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>dq4usage</key>
+    <path>qa/prerequisites/data_provider_definitions/dq4usage</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/prerequisites/data_provider_definitions/dq4usage"/>
+    <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/prerequisites/data_provider_definitions"/>
+    <is_collection>True</is_collection>
+    <is_optional>False</is_optional>
+    <order>2</order>
+    <help lang="en">Define the data quality level/thresholds for usage of collected input datasets.</help>
+    <text lang="en">Define DQ4usage.</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <widget_type>textarea</widget_type>
+    <value_type>text</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions>
+      <condition dc:uri="https://geokur.geo.tu-dresden.de/terms/conditions/pr_open4usage_definition_filled"/>
+    </conditions>
+    <default_external_id/>
+  </question>
+  <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/prerequisites/data_curator_definitions">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>data_curator_definitions</key>
+    <path>qa/prerequisites/data_curator_definitions</path>
+    <dc:comment/>
+    <attribute/>
+    <section dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/prerequisites"/>
+    <is_collection>False</is_collection>
+    <order>1</order>
+    <title lang="en">Data Curator: Definitions</title>
+    <help lang="en">The following questions refer to the definitions of DM4processing, DQ4processing, DM4analysis and DQ4analysis. DM4processing and DQ4processing are levels of data maturity and data quality necessary for processing the data. The data analysis requires the data maturity criteria DM4analysis and the data quality criteria DQ4analysis.</help>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <conditions/>
+  </questionset>
+  <question dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/prerequisites/data_curator_definitions/dm4processing">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>dm4processing</key>
+    <path>qa/prerequisites/data_curator_definitions/dm4processing</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/prerequisites/data_curator_definitions/dm4processing"/>
+    <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/prerequisites/data_curator_definitions"/>
+    <is_collection>True</is_collection>
+    <is_optional>False</is_optional>
+    <order>0</order>
+    <help lang="en">Define the data maturity level/thresholds for processing the datasets</help>
+    <text lang="en">Define DM4processing.</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <widget_type>textarea</widget_type>
+    <value_type>text</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions/>
+    <default_external_id/>
+  </question>
+  <question dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/prerequisites/data_curator_definitions/dq4processing">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>dq4processing</key>
+    <path>qa/prerequisites/data_curator_definitions/dq4processing</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/prerequisites/data_curator_definitions/dq4processing"/>
+    <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/prerequisites/data_curator_definitions"/>
+    <is_collection>True</is_collection>
+    <is_optional>False</is_optional>
+    <order>1</order>
+    <help lang="en">Define the data quality level/thresholds for processing datasets.</help>
+    <text lang="en">Define DQ4processing.</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <widget_type>textarea</widget_type>
+    <value_type>text</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions/>
+    <default_external_id/>
+  </question>
+  <question dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/prerequisites/data_curator_definitions/dm4analysis">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>dm4analysis</key>
+    <path>qa/prerequisites/data_curator_definitions/dm4analysis</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/prerequisites/data_curator_definitions/dm4analysis"/>
+    <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/prerequisites/data_curator_definitions"/>
+    <is_collection>True</is_collection>
+    <is_optional>False</is_optional>
+    <order>2</order>
+    <help lang="en">Define the data maturity level/thresholds for analysing the datasets</help>
+    <text lang="en">Define DM4analysis.</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <widget_type>textarea</widget_type>
+    <value_type>text</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions/>
+    <default_external_id/>
+  </question>
+  <question dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/prerequisites/data_curator_definitions/dq4analysis">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>dq4analysis</key>
+    <path>qa/prerequisites/data_curator_definitions/dq4analysis</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/prerequisites/data_curator_definitions/dq4analysis"/>
+    <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/prerequisites/data_curator_definitions"/>
+    <is_collection>True</is_collection>
+    <is_optional>False</is_optional>
+    <order>3</order>
+    <help lang="en">Define the data quality level/thresholds for analysing datasets.</help>
+    <text lang="en">Define DQ4analysis.</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <widget_type>textarea</widget_type>
+    <value_type>text</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions/>
+    <default_external_id/>
+  </question>
+  <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/prerequisites/data_publisher_definitions">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>data_publisher_definitions</key>
+    <path>qa/prerequisites/data_publisher_definitions</path>
+    <dc:comment/>
+    <attribute/>
+    <section dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/prerequisites"/>
+    <is_collection>False</is_collection>
+    <order>2</order>
+    <title lang="en">Data Publisher: Definitions</title>
+    <help lang="en">The following questions refer to the definitions of DM4publication, DQ4publication, Open4publication, DM4archiving, DQ4archiving and Open4archiving. If a dataset shall be published, it must fulfil the data maturity DM4publication, the data quality DQ4publication and the openness Open4publication (license and &lt;a href="https://5stardata.info/en/"&gt;openness&lt;/a&gt;). For archiving the data the criteria are built accordingly.</help>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <conditions/>
+  </questionset>
+  <question dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/prerequisites/data_publisher_definitions/dm4publication">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>dm4publication</key>
+    <path>qa/prerequisites/data_publisher_definitions/dm4publication</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/prerequisites/data_publisher_definitions/dm4publication"/>
+    <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/prerequisites/data_publisher_definitions"/>
+    <is_collection>True</is_collection>
+    <is_optional>False</is_optional>
+    <order>0</order>
+    <help lang="en">Define the data maturity level/thresholds for publishing the datasets</help>
+    <text lang="en">Define DM4publication.</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <widget_type>textarea</widget_type>
+    <value_type>text</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions/>
+    <default_external_id/>
+  </question>
+  <question dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/prerequisites/data_publisher_definitions/dq4publication">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>dq4publication</key>
+    <path>qa/prerequisites/data_publisher_definitions/dq4publication</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/prerequisites/data_publisher_definitions/dq4publication"/>
+    <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/prerequisites/data_publisher_definitions"/>
+    <is_collection>True</is_collection>
+    <is_optional>False</is_optional>
+    <order>1</order>
+    <help lang="en">Define the data quality level/thresholds for publishing datasets.</help>
+    <text lang="en">Define DQ4publication.</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <widget_type>textarea</widget_type>
+    <value_type>text</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions/>
+    <default_external_id/>
+  </question>
+  <question dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/prerequisites/data_publisher_definitions/open4publication_license">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>open4publication_license</key>
+    <path>qa/prerequisites/data_publisher_definitions/open4publication_license</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/prerequisites/data_publisher_definitions/open4publication_license"/>
+    <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/prerequisites/data_publisher_definitions"/>
+    <is_collection>False</is_collection>
+    <is_optional>False</is_optional>
+    <order>2</order>
+    <help lang="en">Define license demands of dataset publication.&lt;br&gt;Open4publication defines the openness criteria for publishing of data.</help>
+    <text lang="en">Define license for Open4publication.</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <widget_type>textarea</widget_type>
+    <value_type>text</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions/>
+    <default_external_id/>
+  </question>
+  <question dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/prerequisites/data_publisher_definitions/open4publication_fivestars">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>open4publication_fivestars</key>
+    <path>qa/prerequisites/data_publisher_definitions/open4publication_fivestars</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/prerequisites/data_publisher_definitions/open4publication_fivestars"/>
+    <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/prerequisites/data_publisher_definitions"/>
+    <is_collection>False</is_collection>
+    <is_optional>False</is_optional>
+    <order>3</order>
+    <help lang="en">Define Tim Berners-Lee five stars deployment scheme for open data (see &lt;a href="https://5stardata.info/en/"&gt;https://5stardata.info/en/&lt;/a&gt;).&lt;br&gt;Open4publication defines the openness criteria for publishing of data.</help>
+    <text lang="en">Define necessary Berners-Lee five stars for Open4publication.</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <widget_type>radio</widget_type>
+    <value_type>option</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets>
+      <optionset dc:uri="https://geokur.geo.tu-dresden.de/terms/options/five_stars_open_data"/>
+    </optionsets>
+    <default_option/>
+    <conditions>
+      <condition dc:uri="https://geokur.geo.tu-dresden.de/terms/conditions/pr_open4publication_license_defined"/>
+    </conditions>
+    <default_external_id/>
+  </question>
+  <question dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/prerequisites/data_publisher_definitions/dm4archiving">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>dm4archiving</key>
+    <path>qa/prerequisites/data_publisher_definitions/dm4archiving</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/prerequisites/data_publisher_definitions/dm4archiving"/>
+    <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/prerequisites/data_publisher_definitions"/>
+    <is_collection>True</is_collection>
+    <is_optional>False</is_optional>
+    <order>4</order>
+    <help lang="en">Define the data maturity level/thresholds for archiving the datasets</help>
+    <text lang="en">Define DM4archiving.</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <widget_type>textarea</widget_type>
+    <value_type>text</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions/>
+    <default_external_id/>
+  </question>
+  <question dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/prerequisites/data_publisher_definitions/dq4archiving">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>dq4archiving</key>
+    <path>qa/prerequisites/data_publisher_definitions/dq4archiving</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/prerequisites/data_publisher_definitions/dq4archiving"/>
+    <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/prerequisites/data_publisher_definitions"/>
+    <is_collection>True</is_collection>
+    <is_optional>False</is_optional>
+    <order>5</order>
+    <help lang="en">Define the data quality level/thresholds for archiving datasets.</help>
+    <text lang="en">Define DQ4archiving.</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <widget_type>textarea</widget_type>
+    <value_type>text</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions/>
+    <default_external_id/>
+  </question>
+  <question dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/prerequisites/data_publisher_definitions/open4archiving_license">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>open4archiving_license</key>
+    <path>qa/prerequisites/data_publisher_definitions/open4archiving_license</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/prerequisites/data_publisher_definitions/open4archiving_license"/>
+    <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/prerequisites/data_publisher_definitions"/>
+    <is_collection>False</is_collection>
+    <is_optional>False</is_optional>
+    <order>6</order>
+    <help lang="en">Define license demands of dataset archiving.&lt;br&gt;Open4archiving defines the openness criteria for archiving of data.</help>
+    <text lang="en">Define license for Open4archiving.</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <widget_type>textarea</widget_type>
+    <value_type>text</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions/>
+    <default_external_id/>
+  </question>
+  <question dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/prerequisites/data_publisher_definitions/open4archiving_fivestars">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>open4archiving_fivestars</key>
+    <path>qa/prerequisites/data_publisher_definitions/open4archiving_fivestars</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/prerequisites/data_publisher_definitions/open4archiving_fivestars"/>
+    <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/prerequisites/data_publisher_definitions"/>
+    <is_collection>False</is_collection>
+    <is_optional>False</is_optional>
+    <order>7</order>
+    <help lang="en">Define Tim Berners-Lee five stars deployment scheme for open data (see &lt;a href="https://5stardata.info/en/"&gt;https://5stardata.info/en/&lt;/a&gt;).&lt;br&gt;Open4archiving defines the openness criteria for archiving of data.</help>
+    <text lang="en">Define necessary Berners-Lee five stars for Open4archiving.</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <widget_type>radio</widget_type>
+    <value_type>option</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets>
+      <optionset dc:uri="https://geokur.geo.tu-dresden.de/terms/options/five_stars_open_data"/>
+    </optionsets>
+    <default_option/>
+    <conditions>
+      <condition dc:uri="https://geokur.geo.tu-dresden.de/terms/conditions/pr_open4archiving_license_defined"/>
+    </conditions>
+    <default_external_id/>
+  </question>
+  <section dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/collectionPhase">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>collectionPhase</key>
+    <path>qa/collectionPhase</path>
+    <dc:comment/>
+    <catalog dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa"/>
+    <order>1</order>
+    <title lang="en">Collection Phase</title>
+  </section>
+  <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/collectionPhase/collectData">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>collectData</key>
+    <path>qa/collectionPhase/collectData</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/collectionPhase/collectData"/>
+    <section dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/collectionPhase"/>
+    <is_collection>True</is_collection>
+    <order>0</order>
+    <title lang="en">Data Provider: Collect Data</title>
+    <help lang="en">The collection of data is the first step in the data life cycle. Please specify one or multiple datasets to be collected. A dataset is not necessarily one file only. It is possible and advised to aggregate similar types of input data if they share general properties (e.g. source, license)</help>
+    <verbose_name lang="en">dataset</verbose_name>
+    <verbose_name_plural lang="en">datasets</verbose_name_plural>
+    <conditions>
+      <condition dc:uri="https://geokur.geo.tu-dresden.de/terms/conditions/pr_dq4usage_definition_filled"/>
+    </conditions>
+  </questionset>
+  <question dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/collectionPhase/collectData/collectionOfData">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>collectionOfData</key>
+    <path>qa/collectionPhase/collectData/collectionOfData</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/collectionPhase/collectData/collectionOfData"/>
+    <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/collectionPhase/collectData"/>
+    <is_collection>True</is_collection>
+    <is_optional>False</is_optional>
+    <order>0</order>
+    <help lang="en">Describe the sources of collected data. Possible sources are repositories, public authorities, project partners, or own measurements/observations.</help>
+    <text lang="en">How and where do you collect data?</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <widget_type>textarea</widget_type>
+    <value_type>text</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions/>
+    <default_external_id/>
+  </question>
+  <question dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/collectionPhase/collectData/collectionOfDataOpenness">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>collectionOfDataOpenness</key>
+    <path>qa/collectionPhase/collectData/collectionOfDataOpenness</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/collectionPhase/collectData/collectionOfDataOpenness"/>
+    <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/collectionPhase/collectData"/>
+    <is_collection>False</is_collection>
+    <is_optional>False</is_optional>
+    <order>1</order>
+    <help lang="en">The collected dataset must be usable as defined in Open4usage. If the license does not allow usage, the dataset must be omitted.</help>
+    <text lang="en">Is the openness for data usage according to Open4usage criteria ensured?</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <widget_type>yesno</widget_type>
+    <value_type>boolean</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions/>
+    <default_external_id/>
+  </question>
+  <question dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/collectionPhase/collectData/collectionOfDataDataQuality">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>collectionOfDataDataQuality</key>
+    <path>qa/collectionPhase/collectData/collectionOfDataDataQuality</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/collectionPhase/collectData/collectionOfDataDataQuality"/>
+    <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/collectionPhase/collectData"/>
+    <is_collection>False</is_collection>
+    <is_optional>False</is_optional>
+    <order>2</order>
+    <help lang="en">The quality of the dataset must fulfil DQ4usage criteria. If the quality is not sufficient, the dataset must be omitted.</help>
+    <text lang="en">Is the data quality for data usage ensured?</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <widget_type>yesno</widget_type>
+    <value_type>boolean</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions>
+      <condition dc:uri="https://geokur.geo.tu-dresden.de/terms/conditions/cp_open4usage_ensured"/>
+    </conditions>
+    <default_external_id/>
+  </question>
+  <question dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/collectionPhase/collectData/collectionOfDataMetadata">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>collectionOfDataMetadata</key>
+    <path>qa/collectionPhase/collectData/collectionOfDataMetadata</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/collectionPhase/collectData/collectionOfDataMetadata"/>
+    <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/collectionPhase/collectData"/>
+    <is_collection>False</is_collection>
+    <is_optional>False</is_optional>
+    <order>3</order>
+    <help lang="en">If metadata (data about data) is available, it can be used to a better understanding of the dataset. often it is crucial for further usage of the dataset.</help>
+    <text lang="en">Is metadata available?</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <widget_type>yesno</widget_type>
+    <value_type>boolean</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions>
+      <condition dc:uri="https://geokur.geo.tu-dresden.de/terms/conditions/cp_dq4usage_ensured"/>
+    </conditions>
+    <default_external_id/>
+  </question>
+  <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/collectionPhase/metadataUsage">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>metadataUsage</key>
+    <path>qa/collectionPhase/metadataUsage</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/collectionPhase/collectData"/>
+    <section dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/collectionPhase"/>
+    <is_collection>True</is_collection>
+    <order>1</order>
+    <title lang="en">Data Provider: Metadata Usage</title>
+    <help lang="en">Often the existing metadata must be complemented by metadata elements that are necessary for further usage of the data after the collection phase. Metadata includes general elements, domain specifiv elements, and data quality.</help>
+    <verbose_name lang="en">dataset</verbose_name>
+    <verbose_name_plural lang="en">datasets</verbose_name_plural>
+    <conditions>
+      <condition dc:uri="https://geokur.geo.tu-dresden.de/terms/conditions/cp_dq4usage_ensured"/>
+    </conditions>
+  </questionset>
+  <question dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/collectionPhase/metadataUsage/metadataExtraction">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>metadataExtraction</key>
+    <path>qa/collectionPhase/metadataUsage/metadataExtraction</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/collectionPhase/metadataUsage/metadataExtraction"/>
+    <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/collectionPhase/metadataUsage"/>
+    <is_collection>False</is_collection>
+    <is_optional>False</is_optional>
+    <order>0</order>
+    <help lang="en">Metadata Extraction</help>
+    <text lang="en">Is it possible to extract further metadata (possibly automatically)?</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <widget_type>yesno</widget_type>
+    <value_type>boolean</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions/>
+    <default_external_id/>
+  </question>
+  <question dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/collectionPhase/metadataUsage/dataQualityExtraction">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>dataQualityExtraction</key>
+    <path>qa/collectionPhase/metadataUsage/dataQualityExtraction</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/collectionPhase/metadataUsage/dataQualityExtraction"/>
+    <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/collectionPhase/metadataUsage"/>
+    <is_collection>False</is_collection>
+    <is_optional>False</is_optional>
+    <order>1</order>
+    <help lang="en">Data Quality Extraction</help>
+    <text lang="en">Is it possible to extract further data quality (possibly automatically)?</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <widget_type>yesno</widget_type>
+    <value_type>boolean</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions/>
+    <default_external_id/>
+  </question>
+  <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/collectionPhase/metadataEnriching">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>metadataEnriching</key>
+    <path>qa/collectionPhase/metadataEnriching</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/collectionPhase/collectData"/>
+    <section dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/collectionPhase"/>
+    <is_collection>True</is_collection>
+    <order>2</order>
+    <title lang="en">Data Curator: Metadata Enriching</title>
+    <help lang="en">The data curator can potentially enrich the metadata by additional elements. This is mostly done manually.</help>
+    <verbose_name lang="en">dataset</verbose_name>
+    <verbose_name_plural lang="en">datasets</verbose_name_plural>
+    <conditions>
+      <condition dc:uri="https://geokur.geo.tu-dresden.de/terms/conditions/cp_dq4usage_ensured"/>
+    </conditions>
+  </questionset>
+  <question dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/collectionPhase/metadataEnriching/enrichMetadataYesNo">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>enrichMetadataYesNo</key>
+    <path>qa/collectionPhase/metadataEnriching/enrichMetadataYesNo</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/collectionPhase/metadataEnriching/enrichMetadataYesNo"/>
+    <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/collectionPhase/metadataEnriching"/>
+    <is_collection>False</is_collection>
+    <is_optional>False</is_optional>
+    <order>0</order>
+    <help lang="en">If the initial set of metadata does not fulfil project needs additional metadata and data quality measures must be added.</help>
+    <text lang="en">Can the metadata/data quality be enriched?</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <widget_type>yesno</widget_type>
+    <value_type>boolean</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions/>
+    <default_external_id/>
+  </question>
+  <question dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/collectionPhase/metadataEnriching/enrichMetadata">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>enrichMetadata</key>
+    <path>qa/collectionPhase/metadataEnriching/enrichMetadata</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/collectionPhase/metadataEnriching/enrichMetadata"/>
+    <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/collectionPhase/metadataEnriching"/>
+    <is_collection>True</is_collection>
+    <is_optional>False</is_optional>
+    <order>1</order>
+    <help lang="en">Describe the additional metadata fields and/or data quality measures that have to be included in order to fulfil project needs. The DQ4processing is an appropriate guideline here.</help>
+    <text lang="en">How can metadata be enriched? What fields do you plan to add?</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <widget_type>textarea</widget_type>
+    <value_type>text</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions>
+      <condition dc:uri="https://geokur.geo.tu-dresden.de/terms/conditions/cp_enrich_metadata"/>
+    </conditions>
+    <default_external_id/>
+  </question>
+  <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/collectionPhase/qualityControl">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>qualityControl</key>
+    <path>qa/collectionPhase/qualityControl</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/collectionPhase/collectData"/>
+    <section dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/collectionPhase"/>
+    <is_collection>True</is_collection>
+    <order>3</order>
+    <title lang="en">Data Curator: Quality Control</title>
+    <help lang="en">The quality control step plays an important role in the quality assurance workflow. Several phases of the data life cycle can benefit from quality control. Therefore a careful decision must be made.</help>
+    <verbose_name lang="en">dataset</verbose_name>
+    <verbose_name_plural lang="en">datasets</verbose_name_plural>
+    <conditions>
+      <condition dc:uri="https://geokur.geo.tu-dresden.de/terms/conditions/cp_dq4usage_ensured"/>
+    </conditions>
+  </questionset>
+  <question dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/collectionPhase/qualityControl/qualityControlDecision">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>qualityControlDecision</key>
+    <path>qa/collectionPhase/qualityControl/qualityControlDecision</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/collectionPhase/qualityControl/qualityControlDecision"/>
+    <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/collectionPhase/qualityControl"/>
+    <is_collection>False</is_collection>
+    <is_optional>False</is_optional>
+    <order>0</order>
+    <help lang="en">An intermediate quality control step is especially useful, if the input data is derived from own measurements. If such data shall be published directly, a quality control is recommended. Apart from self-measured data a quality control step is advised for data in impact research.</help>
+    <text lang="en">Is an intermediate quality control necessary?</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <widget_type>yesno</widget_type>
+    <value_type>boolean</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions/>
+    <default_external_id/>
+  </question>
+  <question dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/collectionPhase/qualityControl/qualityControlMethod">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>qualityControlMethod</key>
+    <path>qa/collectionPhase/qualityControl/qualityControlMethod</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/collectionPhase/qualityControl/qualityControlMethod"/>
+    <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/collectionPhase/qualityControl"/>
+    <is_collection>True</is_collection>
+    <is_optional>False</is_optional>
+    <order>1</order>
+    <help lang="en">A quality control can consist of different methods depending on data type, potential usage, target community. DQ4processing is an appropriate guideline here.</help>
+    <text lang="en">Describe the method for quality control of this dataset.</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <widget_type>textarea</widget_type>
+    <value_type>text</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions>
+      <condition dc:uri="https://geokur.geo.tu-dresden.de/terms/conditions/cp_quality_control_decision"/>
+    </conditions>
+    <default_external_id/>
+  </question>
+  <question dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/collectionPhase/qualityControl/evaluateFitnessForPurposeMethod">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>evaluateFitnessForPurposeMethod</key>
+    <path>qa/collectionPhase/qualityControl/evaluateFitnessForPurposeMethod</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/collectionPhase/qualityControl/evaluateFitnessForPurposeMethod"/>
+    <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/collectionPhase/qualityControl"/>
+    <is_collection>True</is_collection>
+    <is_optional>False</is_optional>
+    <order>2</order>
+    <help lang="en">Fitness for purpose (utility) and fitness for use (warranty) depict important goals of a dataset to be potentially reused.</help>
+    <text lang="en">Which methods/indicators are used to evaluate the fitness for purpose/use using the results of the quality control?</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <widget_type>textarea</widget_type>
+    <value_type>text</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions>
+      <condition dc:uri="https://geokur.geo.tu-dresden.de/terms/conditions/cp_quality_control_decision"/>
+    </conditions>
+    <default_external_id/>
+  </question>
+  <question dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/collectionPhase/qualityControl/evaluateFitnessForPurposeResult">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>evaluateFitnessForPurposeResult</key>
+    <path>qa/collectionPhase/qualityControl/evaluateFitnessForPurposeResult</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/collectionPhase/qualityControl/evaluateFitnessForPurposeResult"/>
+    <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/collectionPhase/qualityControl"/>
+    <is_collection>True</is_collection>
+    <is_optional>False</is_optional>
+    <order>3</order>
+    <help lang="en"/>
+    <text lang="en">Describe the results of the evaluation of fitness for purpose/use.</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <widget_type>textarea</widget_type>
+    <value_type>text</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions>
+      <condition dc:uri="https://geokur.geo.tu-dresden.de/terms/conditions/cp_quality_control_decision"/>
+    </conditions>
+    <default_external_id/>
+  </question>
+  <question dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/collectionPhase/qualityControl/evaluateFitnessForPurposeInMetadata">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>evaluateFitnessForPurposeInMetadata</key>
+    <path>qa/collectionPhase/qualityControl/evaluateFitnessForPurposeInMetadata</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/collectionPhase/qualityControl/evaluateFitnessForPurposeInMetadata"/>
+    <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/collectionPhase/qualityControl"/>
+    <is_collection>False</is_collection>
+    <is_optional>False</is_optional>
+    <order>4</order>
+    <help lang="en">To foster potential usage of the data the inclusion of indicators and/or other results is strongly recommended.</help>
+    <text lang="en">Are the indicators or other results from fitness for purpose/use included in the metadata?</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <widget_type>yesno</widget_type>
+    <value_type>boolean</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions>
+      <condition dc:uri="https://geokur.geo.tu-dresden.de/terms/conditions/cp_quality_control_decision"/>
+    </conditions>
+    <default_external_id/>
+  </question>
+  <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/collectionPhase/dataMaturityHandling">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>dataMaturityHandling</key>
+    <path>qa/collectionPhase/dataMaturityHandling</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/collectionPhase/collectData"/>
+    <section dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/collectionPhase"/>
+    <is_collection>True</is_collection>
+    <order>4</order>
+    <title lang="en">Data Curator: Data Maturity Handling</title>
+    <help lang="en">The data maturity is an important concept of data meeting the usage requirements. For the next phase the data must reach level 2 data maturity.</help>
+    <verbose_name lang="en">dataset</verbose_name>
+    <verbose_name_plural lang="en">datasets</verbose_name_plural>
+    <conditions>
+      <condition dc:uri="https://geokur.geo.tu-dresden.de/terms/conditions/cp_dq4usage_ensured"/>
+    </conditions>
+  </questionset>
+  <question dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/collectionPhase/dataMaturityHandling/dataMaturityEvaluation">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>dataMaturityEvaluation</key>
+    <path>qa/collectionPhase/dataMaturityHandling/dataMaturityEvaluation</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/collectionPhase/dataMaturityHandling/dataMaturityEvaluation"/>
+    <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/collectionPhase/dataMaturityHandling"/>
+    <is_collection>False</is_collection>
+    <is_optional>False</is_optional>
+    <order>0</order>
+    <help lang="en">The data maturity's evaluation follows the DM4processing criteria in the data maturity matrix. If the dataset shall be published without processing/analyse phases, DM4publication must be fulfilled.</help>
+    <text lang="en">Did you evaluate the data maturity of datasets in collection phase?</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <widget_type>yesno</widget_type>
+    <value_type>boolean</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions/>
+    <default_external_id/>
+  </question>
+  <question dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/collectionPhase/dataMaturityHandling/dataMaturityEvaluationInMetadata">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>dataMaturityEvaluationInMetadata</key>
+    <path>qa/collectionPhase/dataMaturityHandling/dataMaturityEvaluationInMetadata</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/collectionPhase/dataMaturityHandling/dataMaturityEvaluationInMetadata"/>
+    <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/collectionPhase/dataMaturityHandling"/>
+    <is_collection>False</is_collection>
+    <is_optional>False</is_optional>
+    <order>1</order>
+    <help lang="en">To foster potential usage of the data the inclusion of data maturity indicators is strongly recommended.</help>
+    <text lang="en">Did you include the level of data maturity in the metadata?</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <widget_type>yesno</widget_type>
+    <value_type>boolean</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions>
+      <condition dc:uri="https://geokur.geo.tu-dresden.de/terms/conditions/cp_data_maturity_evaluation"/>
+    </conditions>
+    <default_external_id/>
+  </question>
+  <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/collectionPhase/nextSteps">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>nextSteps</key>
+    <path>qa/collectionPhase/nextSteps</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/collectionPhase/collectData"/>
+    <section dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/collectionPhase"/>
+    <is_collection>False</is_collection>
+    <order>5</order>
+    <title lang="en">Data Curator: Next Steps</title>
+    <help lang="en"/>
+    <verbose_name lang="en">dataset</verbose_name>
+    <verbose_name_plural lang="en">datasets</verbose_name_plural>
+    <conditions>
+      <condition dc:uri="https://geokur.geo.tu-dresden.de/terms/conditions/cp_dq4usage_ensured"/>
+    </conditions>
+  </questionset>
+  <question dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/collectionPhase/nextSteps/DMDQIndicators">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>DMDQIndicators</key>
+    <path>qa/collectionPhase/nextSteps/DMDQIndicators</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/collectionPhase/nextSteps/DMDQIndicators"/>
+    <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/collectionPhase/nextSteps"/>
+    <is_collection>False</is_collection>
+    <is_optional>False</is_optional>
+    <order>0</order>
+    <help lang="en">In the case of proceeding to processing phase, DM4processing and DQ4processing must be fulfilled. If the data shall be directly published (e.g. own measurements) DM4publication and DQ4publication must be met.</help>
+    <text lang="en">Give an estimation of data maturity and data quality indicators for all input datasets.</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <widget_type>radio</widget_type>
+    <value_type>option</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets>
+      <optionset dc:uri="https://geokur.geo.tu-dresden.de/terms/options/criteria_after_collecting_phase"/>
+    </optionsets>
+    <default_option/>
+    <conditions/>
+    <default_external_id/>
+  </question>
+  <section dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/processingPhase">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>processingPhase</key>
+    <path>qa/processingPhase</path>
+    <dc:comment/>
+    <catalog dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa"/>
+    <order>2</order>
+    <title lang="en">Processing Phase</title>
+  </section>
+  <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/processingPhase/processData">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>processData</key>
+    <path>qa/processingPhase/processData</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/processingPhase/processData"/>
+    <section dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/processingPhase"/>
+    <is_collection>True</is_collection>
+    <order>0</order>
+    <title lang="en">Data Provider: Process Data</title>
+    <help lang="en">The processing of data is the second step in the data life cycle. Please specify one or multiple datasets to be processed. The same datasets will be used for the analysing phase. A dataset is not necessarily one file only. It is possible and advised to aggregate similar types of data to be processed and analysed if they share general properties (e.g. topic, type)</help>
+    <verbose_name lang="en">dataset</verbose_name>
+    <verbose_name_plural lang="en">datasets</verbose_name_plural>
+    <conditions>
+      <condition dc:uri="https://geokur.geo.tu-dresden.de/terms/conditions/cp_processing_allowed"/>
+    </conditions>
+  </questionset>
+  <question dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/processingPhase/processData/processingOfData">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>processingOfData</key>
+    <path>qa/processingPhase/processData/processingOfData</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/processingPhase/processData/processingOfData"/>
+    <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/processingPhase/processData"/>
+    <is_collection>True</is_collection>
+    <is_optional>False</is_optional>
+    <order>0</order>
+    <help lang="en">Describe the model workflow you create/develop. The single steps depending on the supposed granularity should be mentioned here. Also include the used input datasets according to the collection phase here.</help>
+    <text lang="en">Describe the data processing.</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <widget_type>textarea</widget_type>
+    <value_type>text</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions/>
+    <default_external_id/>
+  </question>
+  <question dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/processingPhase/processData/metadataExtraction">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>metadataExtraction</key>
+    <path>qa/processingPhase/processData/metadataExtraction</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/processingPhase/processData/metadataExtraction"/>
+    <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/processingPhase/processData"/>
+    <is_collection>False</is_collection>
+    <is_optional>False</is_optional>
+    <order>1</order>
+    <help lang="en">The extraction of metadata can either be made manually or automatically (if possible).</help>
+    <text lang="en">Is it possible to extract metadata from the produced dataset?</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <widget_type>yesno</widget_type>
+    <value_type>boolean</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions/>
+    <default_external_id/>
+  </question>
+  <question dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/processingPhase/processData/dataQualityExtraction">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>dataQualityExtraction</key>
+    <path>qa/processingPhase/processData/dataQualityExtraction</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/processingPhase/processData/dataQualityExtraction"/>
+    <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/processingPhase/processData"/>
+    <is_collection>False</is_collection>
+    <is_optional>False</is_optional>
+    <order>2</order>
+    <help lang="en">The extraction of data quality can either be made manually or automatically (if possible). The choice of data quality measures shall follow domain specific rules.</help>
+    <text lang="en">Is it possible to extract data quality measures from the produced dataset?</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <widget_type>yesno</widget_type>
+    <value_type>boolean</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions/>
+    <default_external_id/>
+  </question>
+  <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/processingPhase/metadataEnriching">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>metadataEnriching</key>
+    <path>qa/processingPhase/metadataEnriching</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/processingPhase/processData"/>
+    <section dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/processingPhase"/>
+    <is_collection>True</is_collection>
+    <order>1</order>
+    <title lang="en">Data Curator: Metadata Enriching</title>
+    <help lang="en">The data curator can potentially enrich the metadata by additional elements. This is mostly done manually.</help>
+    <verbose_name lang="en">dataset</verbose_name>
+    <verbose_name_plural lang="en">datasets</verbose_name_plural>
+    <conditions>
+      <condition dc:uri="https://geokur.geo.tu-dresden.de/terms/conditions/cp_processing_allowed"/>
+    </conditions>
+  </questionset>
+  <question dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/processingPhase/metadataEnriching/enrichMetadataYesNo">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>enrichMetadataYesNo</key>
+    <path>qa/processingPhase/metadataEnriching/enrichMetadataYesNo</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/processingPhase/metadataEnriching/enrichMetadataYesNo"/>
+    <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/processingPhase/metadataEnriching"/>
+    <is_collection>False</is_collection>
+    <is_optional>False</is_optional>
+    <order>0</order>
+    <help lang="en">If the initial set of metadata does not fulfil project needs additional metadata and data quality measures must be added.</help>
+    <text lang="en">Can the metadata/data quality be enriched?</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <widget_type>yesno</widget_type>
+    <value_type>boolean</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions/>
+    <default_external_id/>
+  </question>
+  <question dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/processingPhase/metadataEnriching/enrichMetadata">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>enrichMetadata</key>
+    <path>qa/processingPhase/metadataEnriching/enrichMetadata</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/processingPhase/metadataEnriching/enrichMetadata"/>
+    <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/processingPhase/metadataEnriching"/>
+    <is_collection>True</is_collection>
+    <is_optional>False</is_optional>
+    <order>1</order>
+    <help lang="en">Describe the additional metadata fields and/or data quality measures that have to be included in order to fulfil project needs. The DQ4analysis is an appropriate guideline here.</help>
+    <text lang="en">How can metadata and data quality be enriched? What fields/elements do you plan to add?</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <widget_type>textarea</widget_type>
+    <value_type>text</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions>
+      <condition dc:uri="https://geokur.geo.tu-dresden.de/terms/conditions/pp_enrich_metadata"/>
+    </conditions>
+    <default_external_id/>
+  </question>
+  <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/processingPhase/qualityControl">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>qualityControl</key>
+    <path>qa/processingPhase/qualityControl</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/processingPhase/processData"/>
+    <section dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/processingPhase"/>
+    <is_collection>True</is_collection>
+    <order>2</order>
+    <title lang="en">Data Curator: Quality Control</title>
+    <help lang="en">The quality control step plays an important role in the quality assurance workflow. Several phases of the data life cycle can benefit from quality control. Therefore a careful decision must be made.</help>
+    <verbose_name lang="en">dataset</verbose_name>
+    <verbose_name_plural lang="en">datasets</verbose_name_plural>
+    <conditions>
+      <condition dc:uri="https://geokur.geo.tu-dresden.de/terms/conditions/cp_processing_allowed"/>
+    </conditions>
+  </questionset>
+  <question dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/processingPhase/qualityControl/qualityControlDecision">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>qualityControlDecision</key>
+    <path>qa/processingPhase/qualityControl/qualityControlDecision</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/processingPhase/qualityControl/qualityControlDecision"/>
+    <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/processingPhase/qualityControl"/>
+    <is_collection>False</is_collection>
+    <is_optional>False</is_optional>
+    <order>0</order>
+    <help lang="en">A quality control at this step should include basic tests to ensure the basic functionality and characteristics of this dataset to be used in further steps.</help>
+    <text lang="en">Is an intermediate quality control advised?</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <widget_type>yesno</widget_type>
+    <value_type>boolean</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions/>
+    <default_external_id/>
+  </question>
+  <question dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/processingPhase/qualityControl/qualityControlMethod">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>qualityControlMethod</key>
+    <path>qa/processingPhase/qualityControl/qualityControlMethod</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/processingPhase/qualityControl/qualityControlMethod"/>
+    <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/processingPhase/qualityControl"/>
+    <is_collection>True</is_collection>
+    <is_optional>False</is_optional>
+    <order>1</order>
+    <help lang="en">A quality control can consist of different methods depending on data type, potential usage, target community. DQ4analysis is an appropriate guideline here.</help>
+    <text lang="en">Describe the method for quality control of this dataset.</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <widget_type>textarea</widget_type>
+    <value_type>text</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions>
+      <condition dc:uri="https://geokur.geo.tu-dresden.de/terms/conditions/pp_quality_control_decision"/>
+    </conditions>
+    <default_external_id/>
+  </question>
+  <question dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/processingPhase/qualityControl/evaluateFitnessForAnalysis">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>evaluateFitnessForAnalysis</key>
+    <path>qa/processingPhase/qualityControl/evaluateFitnessForAnalysis</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/processingPhase/qualityControl/evaluateFitnessForAnalysis"/>
+    <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/processingPhase/qualityControl"/>
+    <is_collection>True</is_collection>
+    <is_optional>False</is_optional>
+    <order>2</order>
+    <help lang="en">Fitness for analysis examines the potential usage of this dataset in further steps in the data life cycle.</help>
+    <text lang="en">Which methods/indicators are used to evaluate the fitness for analysis using the results of the quality control?</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <widget_type>textarea</widget_type>
+    <value_type>text</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions>
+      <condition dc:uri="https://geokur.geo.tu-dresden.de/terms/conditions/pp_quality_control_decision"/>
+    </conditions>
+    <default_external_id/>
+  </question>
+  <question dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/processingPhase/qualityControl/evaluateFitnessForPurposeResult">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>evaluateFitnessForPurposeResult</key>
+    <path>qa/processingPhase/qualityControl/evaluateFitnessForPurposeResult</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/processingPhase/qualityControl/evaluateFitnessForPurposeResult"/>
+    <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/processingPhase/qualityControl"/>
+    <is_collection>True</is_collection>
+    <is_optional>False</is_optional>
+    <order>3</order>
+    <help lang="en"/>
+    <text lang="en">Describe the results of the evaluation of fitness for purpose/use.</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <widget_type>textarea</widget_type>
+    <value_type>text</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions>
+      <condition dc:uri="https://geokur.geo.tu-dresden.de/terms/conditions/pp_quality_control_decision"/>
+    </conditions>
+    <default_external_id/>
+  </question>
+  <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/processingPhase/dataMaturityHandling">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>dataMaturityHandling</key>
+    <path>qa/processingPhase/dataMaturityHandling</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/processingPhase/processData"/>
+    <section dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/processingPhase"/>
+    <is_collection>True</is_collection>
+    <order>3</order>
+    <title lang="en">Data Curator: Data Maturity Handling</title>
+    <help lang="en">The data maturity is an important concept of data meeting the usage requirements. For the next phase the data must reach level 3 data maturity.</help>
+    <verbose_name lang="en">dataset</verbose_name>
+    <verbose_name_plural lang="en">datasets</verbose_name_plural>
+    <conditions>
+      <condition dc:uri="https://geokur.geo.tu-dresden.de/terms/conditions/cp_processing_allowed"/>
+    </conditions>
+  </questionset>
+  <question dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/processingPhase/dataMaturityHandling/dataMaturityEvaluation">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>dataMaturityEvaluation</key>
+    <path>qa/processingPhase/dataMaturityHandling/dataMaturityEvaluation</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/processingPhase/dataMaturityHandling/dataMaturityEvaluation"/>
+    <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/processingPhase/dataMaturityHandling"/>
+    <is_collection>False</is_collection>
+    <is_optional>False</is_optional>
+    <order>0</order>
+    <help lang="en">The data maturity's evaluation follows the DM4analysis criteria in the data maturity matrix.</help>
+    <text lang="en">Did you evaluate the data maturity of datasets in processing phase?</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <widget_type>yesno</widget_type>
+    <value_type>boolean</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions/>
+    <default_external_id/>
+  </question>
+  <question dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/processingPhase/dataMaturityHandling/dataMaturityEvaluationInMetadata">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>dataMaturityEvaluationInMetadata</key>
+    <path>qa/processingPhase/dataMaturityHandling/dataMaturityEvaluationInMetadata</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/processingPhase/dataMaturityHandling/dataMaturityEvaluationInMetadata"/>
+    <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/processingPhase/dataMaturityHandling"/>
+    <is_collection>False</is_collection>
+    <is_optional>False</is_optional>
+    <order>1</order>
+    <help lang="en">To foster potential usage of the data the inclusion of data maturity indicators is strongly recommended.</help>
+    <text lang="en">Did you include the level of data maturity in the metadata?</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <widget_type>yesno</widget_type>
+    <value_type>boolean</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions>
+      <condition dc:uri="https://geokur.geo.tu-dresden.de/terms/conditions/pp_data_maturity_evaluation"/>
+    </conditions>
+    <default_external_id/>
+  </question>
+  <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/processingPhase/nextSteps">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>nextSteps</key>
+    <path>qa/processingPhase/nextSteps</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/processingPhase/processData"/>
+    <section dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/processingPhase"/>
+    <is_collection>False</is_collection>
+    <order>4</order>
+    <title lang="en">Data Curator: Next Steps</title>
+    <help lang="en"/>
+    <verbose_name lang="en">dataset</verbose_name>
+    <verbose_name_plural lang="en">datasets</verbose_name_plural>
+    <conditions>
+      <condition dc:uri="https://geokur.geo.tu-dresden.de/terms/conditions/cp_processing_allowed"/>
+    </conditions>
+  </questionset>
+  <question dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/processingPhase/nextSteps/DMDQIndicators">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>DMDQIndicators</key>
+    <path>qa/processingPhase/nextSteps/DMDQIndicators</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/processingPhase/nextSteps/DMDQIndicators"/>
+    <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/processingPhase/nextSteps"/>
+    <is_collection>False</is_collection>
+    <is_optional>False</is_optional>
+    <order>0</order>
+    <help lang="en">In order to proceed to the analysis phase DM4analysis and DQ4analysis must be fulfilled.</help>
+    <text lang="en">Give an estimation of data maturity and data quality indicators for all processed datasets.</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <widget_type>radio</widget_type>
+    <value_type>option</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets>
+      <optionset dc:uri="https://geokur.geo.tu-dresden.de/terms/options/criteria_after_processing_phase"/>
+    </optionsets>
+    <default_option/>
+    <conditions/>
+    <default_external_id/>
+  </question>
+  <section dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/analysisPhase">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>analysisPhase</key>
+    <path>qa/analysisPhase</path>
+    <dc:comment/>
+    <catalog dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa"/>
+    <order>3</order>
+    <title lang="en">Analysis Phase</title>
+  </section>
+  <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/analysisPhase/analyseData">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>analyseData</key>
+    <path>qa/analysisPhase/analyseData</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/processingPhase/processData"/>
+    <section dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/analysisPhase"/>
+    <is_collection>True</is_collection>
+    <order>0</order>
+    <title lang="en">Data Provider: Analyse Data</title>
+    <help lang="en">The analysis of data is the third step in the data life cycle. The datasets here are the same like in the processing phase. A dataset is not necessarily one file only. It is possible and advised to aggregate similar types of data to be processed and analysed if they share general properties (e.g. topic, type)</help>
+    <verbose_name lang="en">dataset</verbose_name>
+    <verbose_name_plural lang="en">datasets</verbose_name_plural>
+    <conditions>
+      <condition dc:uri="https://geokur.geo.tu-dresden.de/terms/conditions/pp_analysis_allowed"/>
+    </conditions>
+  </questionset>
+  <question dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/analysisPhase/analyseData/analysisOfData">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>analysisOfData</key>
+    <path>qa/analysisPhase/analyseData/analysisOfData</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/analysisPhase/analyseData/analysisOfData"/>
+    <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/analysisPhase/analyseData"/>
+    <is_collection>True</is_collection>
+    <is_optional>False</is_optional>
+    <order>0</order>
+    <help lang="en">Describe the planned analysis of the dataset. The analysis shall examine the data in depth. This is a reasonable basis for further usage of the data.</help>
+    <text lang="en">Describe the data analysis.</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <widget_type>textarea</widget_type>
+    <value_type>text</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions/>
+    <default_external_id/>
+  </question>
+  <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/analysisPhase/evaluateFitnessForPurpose">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>evaluateFitnessForPurpose</key>
+    <path>qa/analysisPhase/evaluateFitnessForPurpose</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/processingPhase/processData"/>
+    <section dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/analysisPhase"/>
+    <is_collection>True</is_collection>
+    <order>1</order>
+    <title lang="en">Data Curator: Fitness for Purpose/Use</title>
+    <help lang="en">The fitness for purpose (utility) and use (warranty) are general properties of the data. In the analysis phase they should be evaluated in order to assess the usability of the data for own purposes as well as further usage in other research projects/communities.</help>
+    <verbose_name lang="en">dataset</verbose_name>
+    <verbose_name_plural lang="en">datasets</verbose_name_plural>
+    <conditions>
+      <condition dc:uri="https://geokur.geo.tu-dresden.de/terms/conditions/pp_analysis_allowed"/>
+    </conditions>
+  </questionset>
+  <question dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/analysisPhase/evaluateFitnessForPurpose/evaluateFitnessForPurpose">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>evaluateFitnessForPurpose</key>
+    <path>qa/analysisPhase/evaluateFitnessForPurpose/evaluateFitnessForPurpose</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/analysisPhase/evaluateFitnessForPurpose/evaluateFitnessForPurpose"/>
+    <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/analysisPhase/evaluateFitnessForPurpose"/>
+    <is_collection>True</is_collection>
+    <is_optional>False</is_optional>
+    <order>0</order>
+    <help lang="en">The evaluation of the fitness for purpose/use is an important step in the analysis phase. </help>
+    <text lang="en">How can you evaluate the fitness for purpose/use of the data?</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <widget_type>textarea</widget_type>
+    <value_type>text</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions/>
+    <default_external_id/>
+  </question>
+  <question dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/analysisPhase/evaluateFitnessForPurpose/evaluateFitnessForPurposeInMetadata">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>evaluateFitnessForPurposeInMetadata</key>
+    <path>qa/analysisPhase/evaluateFitnessForPurpose/evaluateFitnessForPurposeInMetadata</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/analysisPhase/evaluateFitnessForPurpose/evaluateFitnessForPurposeInMetadata"/>
+    <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/analysisPhase/evaluateFitnessForPurpose"/>
+    <is_collection>False</is_collection>
+    <is_optional>False</is_optional>
+    <order>1</order>
+    <help lang="en">To foster potential usage of the data the inclusion of indicators and/or other results and descriptions is strongly recommended.</help>
+    <text lang="en">Are indicators/descriptions of fitness for purpose/use included in metadata?</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <widget_type>yesno</widget_type>
+    <value_type>boolean</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions/>
+    <default_external_id/>
+  </question>
+  <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/analysisPhase/qualityControl">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>qualityControl</key>
+    <path>qa/analysisPhase/qualityControl</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/processingPhase/processData"/>
+    <section dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/analysisPhase"/>
+    <is_collection>True</is_collection>
+    <order>2</order>
+    <title lang="en">Data Curator: Quality Control</title>
+    <help lang="en">The quality control step plays an important role in the quality assurance workflow. Several phases of the data life cycle can benefit from quality control. Therefore a careful decision must be made.</help>
+    <verbose_name lang="en">dataset</verbose_name>
+    <verbose_name_plural lang="en">datasets</verbose_name_plural>
+    <conditions>
+      <condition dc:uri="https://geokur.geo.tu-dresden.de/terms/conditions/pp_analysis_allowed"/>
+    </conditions>
+  </questionset>
+  <question dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/analysisPhase/qualityControl/qualityControlDecision">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>qualityControlDecision</key>
+    <path>qa/analysisPhase/qualityControl/qualityControlDecision</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/analysisPhase/qualityControl/qualityControlDecision"/>
+    <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/analysisPhase/qualityControl"/>
+    <is_collection>False</is_collection>
+    <is_optional>False</is_optional>
+    <order>0</order>
+    <help lang="en">A quality control at this step is typically necessary. It is a quantified proof of your data.</help>
+    <text lang="en">Is a quality control advised?</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <widget_type>yesno</widget_type>
+    <value_type>boolean</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions/>
+    <default_external_id/>
+  </question>
+  <question dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/analysisPhase/qualityControl/qualityControlMethod">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>qualityControlMethod</key>
+    <path>qa/analysisPhase/qualityControl/qualityControlMethod</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/analysisPhase/qualityControl/qualityControlMethod"/>
+    <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/analysisPhase/qualityControl"/>
+    <is_collection>True</is_collection>
+    <is_optional>False</is_optional>
+    <order>1</order>
+    <help lang="en">A quality control can consist of different methods depending on data type, potential usage, target community. DQ4publication is an appropriate guideline here.</help>
+    <text lang="en">Describe the method for quality control of this dataset.</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <widget_type>textarea</widget_type>
+    <value_type>text</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions>
+      <condition dc:uri="https://geokur.geo.tu-dresden.de/terms/conditions/ap_quality_control_decision"/>
+    </conditions>
+    <default_external_id/>
+  </question>
+  <question dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/analysisPhase/qualityControl/evaluateFitnessForPublication">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>evaluateFitnessForPublication</key>
+    <path>qa/analysisPhase/qualityControl/evaluateFitnessForPublication</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/analysisPhase/qualityControl/evaluateFitnessForPublication"/>
+    <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/analysisPhase/qualityControl"/>
+    <is_collection>True</is_collection>
+    <is_optional>False</is_optional>
+    <order>2</order>
+    <help lang="en">Fitness for publication examines the potential usage of this dataset in further steps in the data life cycle.</help>
+    <text lang="en">Which methods/indicators are used to evaluate the fitness for publication using the results of the quality control?</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <widget_type>textarea</widget_type>
+    <value_type>text</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions>
+      <condition dc:uri="https://geokur.geo.tu-dresden.de/terms/conditions/ap_quality_control_decision"/>
+    </conditions>
+    <default_external_id/>
+  </question>
+  <question dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/analysisPhase/qualityControl/evaluateFitnessForPurposeResult">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>evaluateFitnessForPurposeResult</key>
+    <path>qa/analysisPhase/qualityControl/evaluateFitnessForPurposeResult</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/analysisPhase/qualityControl/evaluateFitnessForPurposeResult"/>
+    <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/analysisPhase/qualityControl"/>
+    <is_collection>True</is_collection>
+    <is_optional>False</is_optional>
+    <order>3</order>
+    <help lang="en"/>
+    <text lang="en">Describe the results of the evaluation of fitness for purpose/use.</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <widget_type>textarea</widget_type>
+    <value_type>text</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions>
+      <condition dc:uri="https://geokur.geo.tu-dresden.de/terms/conditions/ap_quality_control_decision"/>
+    </conditions>
+    <default_external_id/>
+  </question>
+  <question dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/analysisPhase/qualityControl/evaluateFitnessForPurposeInMetadata">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>evaluateFitnessForPurposeInMetadata</key>
+    <path>qa/analysisPhase/qualityControl/evaluateFitnessForPurposeInMetadata</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/analysisPhase/qualityControl/evaluateFitnessForPurposeInMetadata"/>
+    <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/analysisPhase/qualityControl"/>
+    <is_collection>False</is_collection>
+    <is_optional>False</is_optional>
+    <order>4</order>
+    <help lang="en">To foster potential usage of the data the inclusion of indicators and/or other results is strongly recommended.</help>
+    <text lang="en">Are the indicators or other results from fitness for purpose/use included in the metadata?</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <widget_type>yesno</widget_type>
+    <value_type>boolean</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions>
+      <condition dc:uri="https://geokur.geo.tu-dresden.de/terms/conditions/ap_quality_control_decision"/>
+    </conditions>
+    <default_external_id/>
+  </question>
+  <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/analysisPhase/dataMaturityHandling">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>dataMaturityHandling</key>
+    <path>qa/analysisPhase/dataMaturityHandling</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/processingPhase/processData"/>
+    <section dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/analysisPhase"/>
+    <is_collection>True</is_collection>
+    <order>3</order>
+    <title lang="en">Data Curator: Data Maturity Handling</title>
+    <help lang="en">The data maturity is an important concept of data meeting the usage requirements. For the next phase the data must reach level 4 data maturity.</help>
+    <verbose_name lang="en">dataset</verbose_name>
+    <verbose_name_plural lang="en">datasets</verbose_name_plural>
+    <conditions>
+      <condition dc:uri="https://geokur.geo.tu-dresden.de/terms/conditions/pp_analysis_allowed"/>
+    </conditions>
+  </questionset>
+  <question dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/analysisPhase/dataMaturityHandling/dataMaturityEvaluation">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>dataMaturityEvaluation</key>
+    <path>qa/analysisPhase/dataMaturityHandling/dataMaturityEvaluation</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/analysisPhase/dataMaturityHandling/dataMaturityEvaluation"/>
+    <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/analysisPhase/dataMaturityHandling"/>
+    <is_collection>False</is_collection>
+    <is_optional>False</is_optional>
+    <order>0</order>
+    <help lang="en">The data maturity's evaluation follows the DM4publication criteria in the data maturity matrix.</help>
+    <text lang="en">Did you evaluate the data maturity of datasets in analysis phase?</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <widget_type>yesno</widget_type>
+    <value_type>boolean</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions/>
+    <default_external_id/>
+  </question>
+  <question dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/analysisPhase/dataMaturityHandling/dataMaturityEvaluationInMetadata">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>dataMaturityEvaluationInMetadata</key>
+    <path>qa/analysisPhase/dataMaturityHandling/dataMaturityEvaluationInMetadata</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/analysisPhase/dataMaturityHandling/dataMaturityEvaluationInMetadata"/>
+    <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/analysisPhase/dataMaturityHandling"/>
+    <is_collection>False</is_collection>
+    <is_optional>False</is_optional>
+    <order>1</order>
+    <help lang="en">To foster potential usage of the data the inclusion of data maturity indicators is strongly recommended.</help>
+    <text lang="en">Did you include the level of data maturity in the metadata?</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <widget_type>yesno</widget_type>
+    <value_type>boolean</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions>
+      <condition dc:uri="https://geokur.geo.tu-dresden.de/terms/conditions/ap_data_maturity_evaluation"/>
+    </conditions>
+    <default_external_id/>
+  </question>
+  <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/analysisPhase/nextSteps">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>nextSteps</key>
+    <path>qa/analysisPhase/nextSteps</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/processingPhase/processData"/>
+    <section dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/analysisPhase"/>
+    <is_collection>False</is_collection>
+    <order>4</order>
+    <title lang="en">Data Curator: Next Steps</title>
+    <help lang="en"/>
+    <verbose_name lang="en">dataset</verbose_name>
+    <verbose_name_plural lang="en">datasets</verbose_name_plural>
+    <conditions>
+      <condition dc:uri="https://geokur.geo.tu-dresden.de/terms/conditions/pp_analysis_allowed"/>
+    </conditions>
+  </questionset>
+  <question dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/analysisPhase/nextSteps/DMDQIndicators">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>DMDQIndicators</key>
+    <path>qa/analysisPhase/nextSteps/DMDQIndicators</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/analysisPhase/nextSteps/DMDQIndicators"/>
+    <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/analysisPhase/nextSteps"/>
+    <is_collection>False</is_collection>
+    <is_optional>False</is_optional>
+    <order>0</order>
+    <help lang="en">In order to proceed to the publication phase DM4publication and DQ4publication must be fulfilled.</help>
+    <text lang="en">Give an estimation of data maturity and data quality indicators for all analysed datasets.</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <widget_type>radio</widget_type>
+    <value_type>option</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets>
+      <optionset dc:uri="https://geokur.geo.tu-dresden.de/terms/options/criteria_after_analysis_phase"/>
+    </optionsets>
+    <default_option/>
+    <conditions/>
+    <default_external_id/>
+  </question>
+  <section dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/publicationPhase">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>publicationPhase</key>
+    <path>qa/publicationPhase</path>
+    <dc:comment/>
+    <catalog dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa"/>
+    <order>4</order>
+    <title lang="en">Publication Phase</title>
+  </section>
+  <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/publicationPhase/publishData">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>publishData</key>
+    <path>qa/publicationPhase/publishData</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/publicationPhase/publishData"/>
+    <section dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/publicationPhase"/>
+    <is_collection>True</is_collection>
+    <order>0</order>
+    <title lang="en">Data Publisher: Publish Data</title>
+    <help lang="en">The publication of data is the fourth step in the data life cycle. The same datasets are used for publication and archiving phases. A dataset is not necessarily one file only. It is possible and advised to aggregate similar types of data to be publication and/or archived if they share general properties (e.g. topic, type)</help>
+    <verbose_name lang="en">dataset</verbose_name>
+    <verbose_name_plural lang="en">datasets</verbose_name_plural>
+    <conditions>
+      <condition dc:uri="https://geokur.geo.tu-dresden.de/terms/conditions/cp_publication_allowed"/>
+      <condition dc:uri="https://geokur.geo.tu-dresden.de/terms/conditions/ap_publication_allowed"/>
+    </conditions>
+  </questionset>
+  <question dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/publicationPhase/publishData/open4publication">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>open4publication</key>
+    <path>qa/publicationPhase/publishData/open4publication</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/publicationPhase/publishData/open4publication"/>
+    <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/publicationPhase/publishData"/>
+    <is_collection>False</is_collection>
+    <is_optional>False</is_optional>
+    <order>0</order>
+    <help lang="en">Ensured Open4publication is mandatory for publishing the dataset.</help>
+    <text lang="en">Is Open4publication ensured?</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <widget_type>yesno</widget_type>
+    <value_type>boolean</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions/>
+    <default_external_id/>
+  </question>
+  <question dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/publicationPhase/publishData/publicationOfDataDescription">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>publicationOfDataDescription</key>
+    <path>qa/publicationPhase/publishData/publicationOfDataDescription</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/publicationPhase/publishData/publicationOfDataDescription"/>
+    <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/publicationPhase/publishData"/>
+    <is_collection>True</is_collection>
+    <is_optional>False</is_optional>
+    <order>1</order>
+    <help lang="en">The way of publication defines necessary metadata fields and file formats.</help>
+    <text lang="en">How and where do you publish the dataset?</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <widget_type>textarea</widget_type>
+    <value_type>text</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions>
+      <condition dc:uri="https://geokur.geo.tu-dresden.de/terms/conditions/pup_open4publication_assured"/>
+    </conditions>
+    <default_external_id/>
+  </question>
+  <question dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/publicationPhase/publishData/metadataAdaptionYesno">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>metadataAdaptionYesno</key>
+    <path>qa/publicationPhase/publishData/metadataAdaptionYesno</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/publicationPhase/publishData/metadataAdaptionYesno"/>
+    <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/publicationPhase/publishData"/>
+    <is_collection>True</is_collection>
+    <is_optional>False</is_optional>
+    <order>2</order>
+    <help lang="en">Publication of datasets in repositories often leads to repository-specific metadata elements.</help>
+    <text lang="en">Describe the necessary adaption of metadata elements.</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <widget_type>textarea</widget_type>
+    <value_type>text</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions>
+      <condition dc:uri="https://geokur.geo.tu-dresden.de/terms/conditions/pup_open4publication_assured"/>
+    </conditions>
+    <default_external_id/>
+  </question>
+  <question dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/publicationPhase/publishData/metadataAdaption">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>metadataAdaption</key>
+    <path>qa/publicationPhase/publishData/metadataAdaption</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/publicationPhase/publishData/metadataAdaption"/>
+    <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/publicationPhase/publishData"/>
+    <is_collection>False</is_collection>
+    <is_optional>False</is_optional>
+    <order>3</order>
+    <help lang="en">Is the adaption of metadata elements according to the specific needs of the repository finished?</help>
+    <text lang="en">Did you adapt metadata elements?</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <widget_type>yesno</widget_type>
+    <value_type>boolean</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions>
+      <condition dc:uri="https://geokur.geo.tu-dresden.de/terms/conditions/pup_open4publication_assured"/>
+    </conditions>
+    <default_external_id/>
+  </question>
+  <question dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/publicationPhase/publishData/publicationOfData">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>publicationOfData</key>
+    <path>qa/publicationPhase/publishData/publicationOfData</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/publicationPhase/publishData/publicationOfData"/>
+    <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/publicationPhase/publishData"/>
+    <is_collection>False</is_collection>
+    <is_optional>False</is_optional>
+    <order>4</order>
+    <help lang="en"/>
+    <text lang="en">Did you publish the dataset?</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <widget_type>yesno</widget_type>
+    <value_type>boolean</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions>
+      <condition dc:uri="https://geokur.geo.tu-dresden.de/terms/conditions/pup_open4publication_assured"/>
+    </conditions>
+    <default_external_id/>
+  </question>
+  <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/publicationPhase/nextSteps">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>nextSteps</key>
+    <path>qa/publicationPhase/nextSteps</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/publicationPhase/publishData"/>
+    <section dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/publicationPhase"/>
+    <is_collection>False</is_collection>
+    <order>1</order>
+    <title lang="en">Data Publisher: Next Steps</title>
+    <help lang="en"/>
+    <verbose_name lang="en">dataset</verbose_name>
+    <verbose_name_plural lang="en">datasets</verbose_name_plural>
+    <conditions>
+      <condition dc:uri="https://geokur.geo.tu-dresden.de/terms/conditions/cp_publication_allowed"/>
+      <condition dc:uri="https://geokur.geo.tu-dresden.de/terms/conditions/ap_publication_allowed"/>
+    </conditions>
+  </questionset>
+  <question dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/publicationPhase/nextSteps/DMDQIndicators">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>DMDQIndicators</key>
+    <path>qa/publicationPhase/nextSteps/DMDQIndicators</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/publicationPhase/nextSteps/DMDQIndicators"/>
+    <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/publicationPhase/nextSteps"/>
+    <is_collection>False</is_collection>
+    <is_optional>False</is_optional>
+    <order>0</order>
+    <help lang="en">In order to proceed to the archiving phase DM4archiving and DQ4archiving must be fulfilled.</help>
+    <text lang="en">Give an estimation of data maturity and data quality indicators for all analysed datasets.</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <widget_type>radio</widget_type>
+    <value_type>option</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets>
+      <optionset dc:uri="https://geokur.geo.tu-dresden.de/terms/options/criteria_after_publication_phase"/>
+    </optionsets>
+    <default_option/>
+    <conditions/>
+    <default_external_id/>
+  </question>
+  <section dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/archivingPhase">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>archivingPhase</key>
+    <path>qa/archivingPhase</path>
+    <dc:comment/>
+    <catalog dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa"/>
+    <order>5</order>
+    <title lang="en">Archiving Phase</title>
+  </section>
+  <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/archivingPhase/archiveData">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>archiveData</key>
+    <path>qa/archivingPhase/archiveData</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/publicationPhase/publishData"/>
+    <section dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/archivingPhase"/>
+    <is_collection>True</is_collection>
+    <order>0</order>
+    <title lang="en">Data Publisher: Archive Data</title>
+    <help lang="en">The archiving of data is the fifth step in the data life cycle. The same datasets are used for publication and archiving phases. A dataset is not necessarily one file only. It is possible and advised to aggregate similar types of data to be publication and/or archived if they share general properties (e.g. topic, type)</help>
+    <verbose_name lang="en">dataset</verbose_name>
+    <verbose_name_plural lang="en">datasets</verbose_name_plural>
+    <conditions>
+      <condition dc:uri="https://geokur.geo.tu-dresden.de/terms/conditions/pup_archiving_allowed"/>
+    </conditions>
+  </questionset>
+  <question dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/archivingPhase/archiveData/open4archiving">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>open4archiving</key>
+    <path>qa/archivingPhase/archiveData/open4archiving</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/archivingPhase/archiveData/open4archiving"/>
+    <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/archivingPhase/archiveData"/>
+    <is_collection>False</is_collection>
+    <is_optional>False</is_optional>
+    <order>0</order>
+    <help lang="en">Ensured Open4archiving is mandatory for publishing the dataset.</help>
+    <text lang="en">Is Open4archiving ensured?</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <widget_type>yesno</widget_type>
+    <value_type>boolean</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions/>
+    <default_external_id/>
+  </question>
+  <question dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/archivingPhase/archiveData/archivingOfDataDescription">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>archivingOfDataDescription</key>
+    <path>qa/archivingPhase/archiveData/archivingOfDataDescription</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/archivingPhase/archiveData/archivingOfDataDescription"/>
+    <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/archivingPhase/archiveData"/>
+    <is_collection>True</is_collection>
+    <is_optional>False</is_optional>
+    <order>1</order>
+    <help lang="en">The way of archiving defines necessary metadata fields and file formats.</help>
+    <text lang="en">How and where do you archive the dataset?</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <widget_type>textarea</widget_type>
+    <value_type>text</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions>
+      <condition dc:uri="https://geokur.geo.tu-dresden.de/terms/conditions/arp_open4archiving_assured"/>
+    </conditions>
+    <default_external_id/>
+  </question>
+  <question dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/archivingPhase/archiveData/metadataAdaptionYesno">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>metadataAdaptionYesno</key>
+    <path>qa/archivingPhase/archiveData/metadataAdaptionYesno</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/archivingPhase/archiveData/metadataAdaptionYesno"/>
+    <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/archivingPhase/archiveData"/>
+    <is_collection>True</is_collection>
+    <is_optional>False</is_optional>
+    <order>2</order>
+    <help lang="en">Archiving of datasets in repositories often leads to repository-specific metadata elements.</help>
+    <text lang="en">Describe the necessary adaption of metadata elements.</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <widget_type>textarea</widget_type>
+    <value_type>text</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions>
+      <condition dc:uri="https://geokur.geo.tu-dresden.de/terms/conditions/arp_open4archiving_assured"/>
+    </conditions>
+    <default_external_id/>
+  </question>
+  <question dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/archivingPhase/archiveData/metadataAdaption">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>metadataAdaption</key>
+    <path>qa/archivingPhase/archiveData/metadataAdaption</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/archivingPhase/archiveData/metadataAdaption"/>
+    <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/archivingPhase/archiveData"/>
+    <is_collection>False</is_collection>
+    <is_optional>False</is_optional>
+    <order>3</order>
+    <help lang="en">Is the adaption of metadata elements according to the specific needs of the repository finished?</help>
+    <text lang="en">Did you adapt metadata elements?</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <widget_type>yesno</widget_type>
+    <value_type>boolean</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions>
+      <condition dc:uri="https://geokur.geo.tu-dresden.de/terms/conditions/arp_open4archiving_assured"/>
+    </conditions>
+    <default_external_id/>
+  </question>
+  <question dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/archivingPhase/archiveData/archivingOfData">
+    <uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+    <key>archivingOfData</key>
+    <path>qa/archivingPhase/archiveData/archivingOfData</path>
+    <dc:comment/>
+    <attribute dc:uri="https://geokur.geo.tu-dresden.de/terms/domain/qa/archivingPhase/archiveData/archivingOfData"/>
+    <questionset dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa/archivingPhase/archiveData"/>
+    <is_collection>False</is_collection>
+    <is_optional>False</is_optional>
+    <order>4</order>
+    <help lang="en"/>
+    <text lang="en">Did you archive the dataset?</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <widget_type>yesno</widget_type>
+    <value_type>boolean</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions>
+      <condition dc:uri="https://geokur.geo.tu-dresden.de/terms/conditions/arp_open4archiving_assured"/>
+    </conditions>
+    <default_external_id/>
+  </question>
+</rdmo>

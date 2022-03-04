@@ -1,0 +1,227 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rdmo xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <catalog dc:uri="https://example.org/terms2/questions/example2">
+    <uri_prefix>https://example.org/terms2</uri_prefix>
+    <key>example2</key>
+    <dc:comment/>
+    <order>0</order>
+    <title lang="en">Example Questionnaire 2</title>
+    <title lang="de">Beispielkatalog 2</title>
+    <help lang="en">This catalog offers questionsets with collections.</help>
+    <help lang="de">Dieser Katalog zeigt die Verwendung von Kollektionen in Fragensets.</help>
+  </catalog>
+  <section dc:uri="https://example.org/terms2/questions/example2/section1">
+    <uri_prefix>https://example.org/terms2</uri_prefix>
+    <key>section1</key>
+    <path>example2/section1</path>
+    <dc:comment/>
+    <catalog dc:uri="https://example.org/terms2/questions/example2"/>
+    <order>0</order>
+    <title lang="en">Section 1</title>
+    <title lang="de">Abschnitt 1</title>
+  </section>
+  <questionset dc:uri="https://example.org/terms2/questions/example2/section1/questionset1">
+    <uri_prefix>https://example.org/terms2</uri_prefix>
+    <key>questionset1</key>
+    <path>example2/section1/questionset1</path>
+    <dc:comment/>
+    <attribute dc:uri="https://example.org/terms2/domain/example2/section1/questionset1"/>
+    <section dc:uri="https://example.org/terms2/questions/example2/section1"/>
+    <is_collection>True</is_collection>
+    <order>0</order>
+    <title lang="en">Questionset 1</title>
+    <help lang="en">The dataset given here is valid for questionset 1 and 2.</help>
+    <verbose_name lang="en">dataset</verbose_name>
+    <verbose_name_plural lang="en">datasets</verbose_name_plural>
+    <title lang="de">Fragenset 1</title>
+    <help lang="de">Die hier angegebenen Datensätze gelten für Fragenset 1 und 2.</help>
+    <verbose_name lang="de">Datensatz</verbose_name>
+    <verbose_name_plural lang="de">Datensätze</verbose_name_plural>
+    <conditions/>
+  </questionset>
+  <question dc:uri="https://example.org/terms2/questions/example2/section1/questionset1/question1">
+    <uri_prefix>https://example.org/terms2</uri_prefix>
+    <key>question1</key>
+    <path>example2/section1/questionset1/question1</path>
+    <dc:comment/>
+    <attribute dc:uri="https://example.org/terms2/domain/example2/section1/questionset1/question1"/>
+    <questionset dc:uri="https://example.org/terms2/questions/example2/section1/questionset1"/>
+    <is_collection>False</is_collection>
+    <is_optional>False</is_optional>
+    <order>0</order>
+    <help lang="en"/>
+    <text lang="en">Is the data used?</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <help lang="de"/>
+    <text lang="de">Werden diese Daten genutzt?</text>
+    <default_text lang="de"/>
+    <verbose_name lang="de"/>
+    <verbose_name_plural lang="de"/>
+    <widget_type>yesno</widget_type>
+    <value_type>boolean</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions/>
+    <default_external_id/>
+  </question>
+  <questionset dc:uri="https://example.org/terms2/questions/example2/section1/questionset2">
+    <uri_prefix>https://example.org/terms2</uri_prefix>
+    <key>questionset2</key>
+    <path>example2/section1/questionset2</path>
+    <dc:comment/>
+    <attribute dc:uri="https://example.org/terms2/domain/example2/section1/questionset1"/>
+    <section dc:uri="https://example.org/terms2/questions/example2/section1"/>
+    <is_collection>True</is_collection>
+    <order>1</order>
+    <title lang="en">Questionset 2</title>
+    <help lang="en">The dataset given here is valid for questionset 1 and 2.</help>
+    <verbose_name lang="en">dataset</verbose_name>
+    <verbose_name_plural lang="en">datasets</verbose_name_plural>
+    <title lang="de">Fragenset 2</title>
+    <help lang="de">Die hier angegebenen Datensätze gelten für Fragenset 1 und 2.</help>
+    <verbose_name lang="de">Datensatz</verbose_name>
+    <verbose_name_plural lang="de">Datensätze</verbose_name_plural>
+    <conditions/>
+  </questionset>
+  <question dc:uri="https://example.org/terms2/questions/example2/section1/questionset2/question1">
+    <uri_prefix>https://example.org/terms2</uri_prefix>
+    <key>question1</key>
+    <path>example2/section1/questionset2/question1</path>
+    <dc:comment/>
+    <attribute dc:uri="https://example.org/terms2/domain/example2/section1/questionset2/question1"/>
+    <questionset dc:uri="https://example.org/terms2/questions/example2/section1/questionset2"/>
+    <is_collection>False</is_collection>
+    <is_optional>False</is_optional>
+    <order>0</order>
+    <help lang="en"/>
+    <text lang="en">Is the data used?</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <help lang="de"/>
+    <text lang="de">Werden diese Daten genutzt?</text>
+    <default_text lang="de"/>
+    <verbose_name lang="de"/>
+    <verbose_name_plural lang="de"/>
+    <widget_type>yesno</widget_type>
+    <value_type>boolean</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions/>
+    <default_external_id/>
+  </question>
+  <questionset dc:uri="https://example.org/terms2/questions/example2/section1/questionset3">
+    <uri_prefix>https://example.org/terms2</uri_prefix>
+    <key>questionset3</key>
+    <path>example2/section1/questionset3</path>
+    <dc:comment/>
+    <attribute dc:uri="https://example.org/terms2/domain/example2/section1/questionset3"/>
+    <section dc:uri="https://example.org/terms2/questions/example2/section1"/>
+    <is_collection>True</is_collection>
+    <order>2</order>
+    <title lang="en">Questionset 3</title>
+    <help lang="en">The dataset given here is valid for questionset 3 and 4.</help>
+    <verbose_name lang="en">dataset</verbose_name>
+    <verbose_name_plural lang="en">datasets</verbose_name_plural>
+    <title lang="de">Fragenset 3</title>
+    <help lang="de">Die hier angegebenen Datensätze gelten für Fragenset 3 und 4.</help>
+    <verbose_name lang="de">Datensatz</verbose_name>
+    <verbose_name_plural lang="de">Datensätze</verbose_name_plural>
+    <conditions/>
+  </questionset>
+  <question dc:uri="https://example.org/terms2/questions/example2/section1/questionset3/question1">
+    <uri_prefix>https://example.org/terms2</uri_prefix>
+    <key>question1</key>
+    <path>example2/section1/questionset3/question1</path>
+    <dc:comment/>
+    <attribute dc:uri="https://example.org/terms2/domain/example2/section1/questionset3/question1"/>
+    <questionset dc:uri="https://example.org/terms2/questions/example2/section1/questionset3"/>
+    <is_collection>False</is_collection>
+    <is_optional>False</is_optional>
+    <order>0</order>
+    <help lang="en"/>
+    <text lang="en">Is the data used?</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <help lang="de"/>
+    <text lang="de">Werden diese Daten genutzt?</text>
+    <default_text lang="de"/>
+    <verbose_name lang="de"/>
+    <verbose_name_plural lang="de"/>
+    <widget_type>yesno</widget_type>
+    <value_type>boolean</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions/>
+    <default_external_id/>
+  </question>
+  <questionset dc:uri="https://example.org/terms2/questions/example2/section1/questionset4">
+    <uri_prefix>https://example.org/terms2</uri_prefix>
+    <key>questionset4</key>
+    <path>example2/section1/questionset4</path>
+    <dc:comment/>
+    <attribute dc:uri="https://example.org/terms2/domain/example2/section1/questionset3"/>
+    <section dc:uri="https://example.org/terms2/questions/example2/section1"/>
+    <is_collection>True</is_collection>
+    <order>3</order>
+    <title lang="en">Questionset 4</title>
+    <help lang="en">The dataset given here is valid for questionset 3 and 4.</help>
+    <verbose_name lang="en">dataset</verbose_name>
+    <verbose_name_plural lang="en">datasets</verbose_name_plural>
+    <title lang="de">Fragenset 4</title>
+    <help lang="de">Die hier angegebenen Datensätze gelten für Fragenset 3 und 4.</help>
+    <verbose_name lang="de">Datensatz</verbose_name>
+    <verbose_name_plural lang="de">Datensätze</verbose_name_plural>
+    <conditions/>
+  </questionset>
+  <question dc:uri="https://example.org/terms2/questions/example2/section1/questionset4/question1">
+    <uri_prefix>https://example.org/terms2</uri_prefix>
+    <key>question1</key>
+    <path>example2/section1/questionset4/question1</path>
+    <dc:comment/>
+    <attribute dc:uri="https://example.org/terms2/domain/example2/section1/questionset4/question1"/>
+    <questionset dc:uri="https://example.org/terms2/questions/example2/section1/questionset4"/>
+    <is_collection>False</is_collection>
+    <is_optional>False</is_optional>
+    <order>0</order>
+    <help lang="en"/>
+    <text lang="en">How is the data used?</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <help lang="de"/>
+    <text lang="de">Wie werden diese Daten genutzt?</text>
+    <default_text lang="de"/>
+    <verbose_name lang="de"/>
+    <verbose_name_plural lang="de"/>
+    <widget_type>text</widget_type>
+    <value_type>text</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions/>
+    <default_external_id/>
+  </question>
+</rdmo>

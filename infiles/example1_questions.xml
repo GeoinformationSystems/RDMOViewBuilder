@@ -1,0 +1,336 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rdmo xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <catalog dc:uri="https://example.org/terms1/questions/example1">
+    <uri_prefix>https://example.org/terms1</uri_prefix>
+    <key>example1</key>
+    <dc:comment/>
+    <order>0</order>
+    <title lang="en">Example Questionnaire 1</title>
+    <title lang="de">Beispielkatalog 1</title>
+    <help lang="en">This catalog serves as an example with different types of answers including options.</help>
+    <help lang="de">Dieser Katalog zeigt beispielhaft verschiedene Antworttypen auf Fragen inkl. vorgefertigter Optionen.</help>
+  </catalog>
+  <section dc:uri="https://example.org/terms1/questions/example1/section1">
+    <uri_prefix>https://example.org/terms1</uri_prefix>
+    <key>section1</key>
+    <path>example1/section1</path>
+    <dc:comment/>
+    <catalog dc:uri="https://example.org/terms1/questions/example1"/>
+    <order>0</order>
+    <title lang="en">Section 1</title>
+    <title lang="de">Abschnitt 1</title>
+  </section>
+  <questionset dc:uri="https://example.org/terms1/questions/example1/section1/questionset1">
+    <uri_prefix>https://example.org/terms1</uri_prefix>
+    <key>questionset1</key>
+    <path>example1/section1/questionset1</path>
+    <dc:comment/>
+    <attribute/>
+    <section dc:uri="https://example.org/terms1/questions/example1/section1"/>
+    <is_collection>False</is_collection>
+    <order>0</order>
+    <title lang="en">Questionset 1</title>
+    <help lang="en">Here different answer possibilities for questions are given.</help>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <title lang="de">Fragenset 1</title>
+    <help lang="de">Hier werden verschiedene Antwortmöglichkeiten für Fragen in RDMO aufgezeigt.</help>
+    <verbose_name lang="de"/>
+    <verbose_name_plural lang="de"/>
+    <conditions/>
+  </questionset>
+  <question dc:uri="https://example.org/terms1/questions/example1/section1/questionset1/question1">
+    <uri_prefix>https://example.org/terms1</uri_prefix>
+    <key>question1</key>
+    <path>example1/section1/questionset1/question1</path>
+    <dc:comment/>
+    <attribute dc:uri="https://example.org/terms1/domain/example1/section1/questionset1/question1"/>
+    <questionset dc:uri="https://example.org/terms1/questions/example1/section1/questionset1"/>
+    <is_collection>False</is_collection>
+    <is_optional>False</is_optional>
+    <order>0</order>
+    <help lang="en">Text type.</help>
+    <text lang="en">Text</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <help lang="de">Text Typ.</help>
+    <text lang="de">Text</text>
+    <default_text lang="de"/>
+    <verbose_name lang="de"/>
+    <verbose_name_plural lang="de"/>
+    <widget_type>text</widget_type>
+    <value_type>text</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions/>
+    <default_external_id/>
+  </question>
+  <question dc:uri="https://example.org/terms1/questions/example1/section1/questionset1/question2">
+    <uri_prefix>https://example.org/terms1</uri_prefix>
+    <key>question2</key>
+    <path>example1/section1/questionset1/question2</path>
+    <dc:comment/>
+    <attribute dc:uri="https://example.org/terms1/domain/example1/section1/questionset1/question2"/>
+    <questionset dc:uri="https://example.org/terms1/questions/example1/section1/questionset1"/>
+    <is_collection>False</is_collection>
+    <is_optional>False</is_optional>
+    <order>1</order>
+    <help lang="en">Textarea type.</help>
+    <text lang="en">Textarea</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <help lang="de">Textarea Typ.</help>
+    <text lang="de">Textarea</text>
+    <default_text lang="de"/>
+    <verbose_name lang="de"/>
+    <verbose_name_plural lang="de"/>
+    <widget_type>textarea</widget_type>
+    <value_type>text</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions/>
+    <default_external_id/>
+  </question>
+  <question dc:uri="https://example.org/terms1/questions/example1/section1/questionset1/question3">
+    <uri_prefix>https://example.org/terms1</uri_prefix>
+    <key>question3</key>
+    <path>example1/section1/questionset1/question3</path>
+    <dc:comment/>
+    <attribute dc:uri="https://example.org/terms1/domain/example1/section1/questionset1/question3"/>
+    <questionset dc:uri="https://example.org/terms1/questions/example1/section1/questionset1"/>
+    <is_collection>False</is_collection>
+    <is_optional>False</is_optional>
+    <order>2</order>
+    <help lang="en">Yesno type.</help>
+    <text lang="en">Yesno</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <help lang="de">Yesno Typ.</help>
+    <text lang="de">Yesno</text>
+    <default_text lang="de"/>
+    <verbose_name lang="de"/>
+    <verbose_name_plural lang="de"/>
+    <widget_type>yesno</widget_type>
+    <value_type>boolean</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions/>
+    <default_external_id/>
+  </question>
+  <question dc:uri="https://example.org/terms1/questions/example1/section1/questionset1/question4">
+    <uri_prefix>https://example.org/terms1</uri_prefix>
+    <key>question4</key>
+    <path>example1/section1/questionset1/question4</path>
+    <dc:comment/>
+    <attribute dc:uri="https://example.org/terms1/domain/example1/section1/questionset1/question4"/>
+    <questionset dc:uri="https://example.org/terms1/questions/example1/section1/questionset1"/>
+    <is_collection>False</is_collection>
+    <is_optional>False</is_optional>
+    <order>3</order>
+    <help lang="en">Select type.</help>
+    <text lang="en">Select</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <help lang="de">Select Typ.</help>
+    <text lang="de">Select</text>
+    <default_text lang="de"/>
+    <verbose_name lang="de"/>
+    <verbose_name_plural lang="de"/>
+    <widget_type>select</widget_type>
+    <value_type>option</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets>
+      <optionset dc:uri="https://example.org/terms1/options/exampleOptionset"/>
+    </optionsets>
+    <default_option/>
+    <conditions/>
+    <default_external_id/>
+  </question>
+  <question dc:uri="https://example.org/terms1/questions/example1/section1/questionset1/question5">
+    <uri_prefix>https://example.org/terms1</uri_prefix>
+    <key>question5</key>
+    <path>example1/section1/questionset1/question5</path>
+    <dc:comment/>
+    <attribute dc:uri="https://example.org/terms1/domain/example1/section1/questionset1/question5"/>
+    <questionset dc:uri="https://example.org/terms1/questions/example1/section1/questionset1"/>
+    <is_collection>False</is_collection>
+    <is_optional>False</is_optional>
+    <order>4</order>
+    <help lang="en">Radiobutton type</help>
+    <text lang="en">Radio</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <help lang="de">Radiobutton Typ</help>
+    <text lang="de">Radio</text>
+    <default_text lang="de"/>
+    <verbose_name lang="de"/>
+    <verbose_name_plural lang="de"/>
+    <widget_type>radio</widget_type>
+    <value_type>option</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets>
+      <optionset dc:uri="https://example.org/terms1/options/exampleOptionset"/>
+    </optionsets>
+    <default_option/>
+    <conditions/>
+    <default_external_id/>
+  </question>
+  <question dc:uri="https://example.org/terms1/questions/example1/section1/questionset1/question6">
+    <uri_prefix>https://example.org/terms1</uri_prefix>
+    <key>question6</key>
+    <path>example1/section1/questionset1/question6</path>
+    <dc:comment/>
+    <attribute dc:uri="https://example.org/terms1/domain/example1/section1/questionset1/question6"/>
+    <questionset dc:uri="https://example.org/terms1/questions/example1/section1/questionset1"/>
+    <is_collection>False</is_collection>
+    <is_optional>False</is_optional>
+    <order>5</order>
+    <help lang="en">Checkbox type</help>
+    <text lang="en">Checkbox</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <help lang="de">Checkbox Typ</help>
+    <text lang="de">Checkbox</text>
+    <default_text lang="de"/>
+    <verbose_name lang="de"/>
+    <verbose_name_plural lang="de"/>
+    <widget_type>checkbox</widget_type>
+    <value_type>option</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets>
+      <optionset dc:uri="https://example.org/terms1/options/exampleOptionset"/>
+    </optionsets>
+    <default_option/>
+    <conditions/>
+    <default_external_id/>
+  </question>
+  <question dc:uri="https://example.org/terms1/questions/example1/section1/questionset1/question7">
+    <uri_prefix>https://example.org/terms1</uri_prefix>
+    <key>question7</key>
+    <path>example1/section1/questionset1/question7</path>
+    <dc:comment/>
+    <attribute dc:uri="https://example.org/terms1/domain/example1/section1/questionset1/question7"/>
+    <questionset dc:uri="https://example.org/terms1/questions/example1/section1/questionset1"/>
+    <is_collection>False</is_collection>
+    <is_optional>False</is_optional>
+    <order>6</order>
+    <help lang="en">Range type</help>
+    <text lang="en">Range</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <help lang="de">Range Typ</help>
+    <text lang="de">Range</text>
+    <default_text lang="de"/>
+    <verbose_name lang="de"/>
+    <verbose_name_plural lang="de"/>
+    <widget_type>range</widget_type>
+    <value_type>integer</value_type>
+    <maximum>100</maximum>
+    <minimum>0</minimum>
+    <step>1</step>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions/>
+    <default_external_id/>
+  </question>
+  <question dc:uri="https://example.org/terms1/questions/example1/section1/questionset1/question8">
+    <uri_prefix>https://example.org/terms1</uri_prefix>
+    <key>question8</key>
+    <path>example1/section1/questionset1/question8</path>
+    <dc:comment/>
+    <attribute dc:uri="https://example.org/terms1/domain/example1/section1/questionset1/question8"/>
+    <questionset dc:uri="https://example.org/terms1/questions/example1/section1/questionset1"/>
+    <is_collection>False</is_collection>
+    <is_optional>False</is_optional>
+    <order>7</order>
+    <help lang="en">Datetime Picker</help>
+    <text lang="en">Date</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en"/>
+    <verbose_name_plural lang="en"/>
+    <help lang="de">Datumsauswahl</help>
+    <text lang="de">Datum</text>
+    <default_text lang="de"/>
+    <verbose_name lang="de"/>
+    <verbose_name_plural lang="de"/>
+    <widget_type>date</widget_type>
+    <value_type>datetime</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions/>
+    <default_external_id/>
+  </question>
+  <question dc:uri="https://example.org/terms1/questions/example1/section1/questionset1/question9">
+    <uri_prefix>https://example.org/terms1</uri_prefix>
+    <key>question9</key>
+    <path>example1/section1/questionset1/question9</path>
+    <dc:comment/>
+    <attribute dc:uri="https://example.org/terms1/domain/example1/section1/questionset1/question9"/>
+    <questionset dc:uri="https://example.org/terms1/questions/example1/section1/questionset1"/>
+    <is_collection>True</is_collection>
+    <is_optional>False</is_optional>
+    <order>8</order>
+    <help lang="en">File upload</help>
+    <text lang="en">File</text>
+    <default_text lang="en"/>
+    <verbose_name lang="en">file</verbose_name>
+    <verbose_name_plural lang="en">files</verbose_name_plural>
+    <help lang="de">Dateiupload</help>
+    <text lang="de">Datei</text>
+    <default_text lang="de"/>
+    <verbose_name lang="de">Datei</verbose_name>
+    <verbose_name_plural lang="de">Dateien</verbose_name_plural>
+    <widget_type>file</widget_type>
+    <value_type>file</value_type>
+    <maximum/>
+    <minimum/>
+    <step/>
+    <unit/>
+    <width/>
+    <optionsets/>
+    <default_option/>
+    <conditions/>
+    <default_external_id/>
+  </question>
+</rdmo>

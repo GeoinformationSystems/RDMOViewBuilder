@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdmo xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <view dc:uri="https://example.org/terms1/views/example1">
+    <uri_prefix>https://example.org/terms1</uri_prefix>
+    <key>example1</key>
+    <dc:comment />
+    <title lang="en">Example Questionnaire 1</title>
+    <help lang="en">This catalog serves as an example with different types of answers including options.</help>
+    <catalogs>
+      <catalog dc:uri="https://example.org/terms1/questions/example1"/>
+    </catalogs>
+    <template>
+{% load view_tags %}
+
+  &lt;h1&gt;Example Questionnaire 1&lt;/h1&gt;
+
+  &lt;h2&gt;Section 1&lt;/h2&gt;
+
+  &lt;h3&gt;Questionset 1&lt;/h3&gt;
+  &lt;i&gt;Here different answer possibilities for questions are given.&lt;/i&gt;
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;Text&lt;/b&gt;
+  &lt;i&gt;Text type.&lt;/i&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  {% render_value &apos;example1/section1/questionset1/question1&apos; %}
+&lt;/p&gt;
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;Textarea&lt;/b&gt;
+  &lt;i&gt;Textarea type.&lt;/i&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  {% render_value &apos;example1/section1/questionset1/question2&apos; %}
+&lt;/p&gt;
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;Yesno&lt;/b&gt;
+  &lt;i&gt;Yesno type.&lt;/i&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  {% render_value &apos;example1/section1/questionset1/question3&apos; %}
+&lt;/p&gt;
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;Select&lt;/b&gt;
+  &lt;i&gt;Select type.&lt;/i&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  {% render_value &apos;example1/section1/questionset1/question4&apos; %}
+&lt;/p&gt;
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;Radio&lt;/b&gt;
+  &lt;i&gt;Radiobutton type&lt;/i&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  {% render_value &apos;example1/section1/questionset1/question5&apos; %}
+&lt;/p&gt;
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;Checkbox&lt;/b&gt;
+  &lt;i&gt;Checkbox type&lt;/i&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  {% render_value &apos;example1/section1/questionset1/question6&apos; %}
+&lt;/p&gt;
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;Range&lt;/b&gt;
+  &lt;i&gt;Range type&lt;/i&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  {% render_value &apos;example1/section1/questionset1/question7&apos; %}
+&lt;/p&gt;
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;Date&lt;/b&gt;
+  &lt;i&gt;Datetime Picker&lt;/i&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  {% render_value &apos;example1/section1/questionset1/question8&apos; %}
+&lt;/p&gt;
+
+&lt;p&gt;
+  &lt;br&gt;
+  &lt;b&gt;File&lt;/b&gt;
+  &lt;i&gt;File upload&lt;/i&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  {% render_value_list &apos;example1/section1/questionset1/question9&apos; %}
+&lt;/p&gt;
+    </template>
+  </view>
+</rdmo>
