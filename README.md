@@ -10,8 +10,8 @@ import BuildView
 BuildView.control_create_view("infiles/qa_questions.xml", en="outfiles/qa_questions_view_template_en.xml")
 ```
 
-This produces an example view for the catalog in infiles/qa_questions.xml. The title gets <h1>, a section <h2>, a
-questionset <h3>. The questions are written in bold letters, help texts italic. Collections in questionsets as well as 
+This produces an example view for the catalog in infiles/qa_questions.xml. The title gets `<h1>`, a section `<h2>`, a
+questionset `<h3>`. The questions are written in bold letters, help texts italic. Collections in questionsets as well as 
 collections in questions are taken into account.
 
 RDMOViewBuilder creates a view draft including each question from the given catalog. For specific purposes, the view
