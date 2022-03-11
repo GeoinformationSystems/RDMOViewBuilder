@@ -111,7 +111,7 @@
   &lt;i&gt;Define license demands of dataset publication.&lt;br&gt;Open4publication defines the openness criteria for publishing of data.&lt;/i&gt;
 &lt;/p&gt;
 &lt;p&gt;
-  {% render_value_list &apos;qa/prerequisites/data_publisher_definitions/open4publication_license&apos; %}
+  {% render_value &apos;qa/prerequisites/data_publisher_definitions/open4publication_license&apos; %}
 &lt;/p&gt;
 
 &lt;p&gt;
@@ -120,7 +120,7 @@
   &lt;i&gt;Define Tim Berners-Lee five stars deployment scheme for open data (see &lt;a href=&quot;https://5stardata.info/en/&quot;&gt;https://5stardata.info/en/&lt;/a&gt;).&lt;br&gt;Open4publication defines the openness criteria for publishing of data.&lt;/i&gt;
 &lt;/p&gt;
 &lt;p&gt;
-  {% render_value_list &apos;qa/prerequisites/data_publisher_definitions/open4publication_fivestars&apos; %}
+  {% render_value &apos;qa/prerequisites/data_publisher_definitions/open4publication_fivestars&apos; %}
 &lt;/p&gt;
 
 &lt;p&gt;
@@ -147,7 +147,7 @@
   &lt;i&gt;Define license demands of dataset archiving.&lt;br&gt;Open4archiving defines the openness criteria for archiving of data.&lt;/i&gt;
 &lt;/p&gt;
 &lt;p&gt;
-  {% render_value_list &apos;qa/prerequisites/data_publisher_definitions/open4archiving_license&apos; %}
+  {% render_value &apos;qa/prerequisites/data_publisher_definitions/open4archiving_license&apos; %}
 &lt;/p&gt;
 
 &lt;p&gt;
@@ -156,7 +156,7 @@
   &lt;i&gt;Define Tim Berners-Lee five stars deployment scheme for open data (see &lt;a href=&quot;https://5stardata.info/en/&quot;&gt;https://5stardata.info/en/&lt;/a&gt;).&lt;br&gt;Open4archiving defines the openness criteria for archiving of data.&lt;/i&gt;
 &lt;/p&gt;
 &lt;p&gt;
-  {% render_value_list &apos;qa/prerequisites/data_publisher_definitions/open4archiving_fivestars&apos; %}
+  {% render_value &apos;qa/prerequisites/data_publisher_definitions/open4archiving_fivestars&apos; %}
 &lt;/p&gt;
 
   &lt;h2&gt;Collection Phase&lt;/h2&gt;
@@ -186,7 +186,7 @@
 {% for collectData in collectData_all %}
 &lt;p&gt;
   &lt;i&gt;collectData {{ collectData.value }}:&lt;/i&gt;
-  {% render_set_value_list collectData &apos;qa/collectionPhase/collectData/collectionOfDataOpenness&apos; %}
+  {% render_set_value collectData &apos;qa/collectionPhase/collectData/collectionOfDataOpenness&apos; %}
 &lt;/p&gt;
 {% endfor %}
 
@@ -198,7 +198,7 @@
 {% for collectData in collectData_all %}
 &lt;p&gt;
   &lt;i&gt;collectData {{ collectData.value }}:&lt;/i&gt;
-  {% render_set_value_list collectData &apos;qa/collectionPhase/collectData/collectionOfDataDataQuality&apos; %}
+  {% render_set_value collectData &apos;qa/collectionPhase/collectData/collectionOfDataDataQuality&apos; %}
 &lt;/p&gt;
 {% endfor %}
 
@@ -210,7 +210,7 @@
 {% for collectData in collectData_all %}
 &lt;p&gt;
   &lt;i&gt;collectData {{ collectData.value }}:&lt;/i&gt;
-  {% render_set_value_list collectData &apos;qa/collectionPhase/collectData/collectionOfDataMetadata&apos; %}
+  {% render_set_value collectData &apos;qa/collectionPhase/collectData/collectionOfDataMetadata&apos; %}
 &lt;/p&gt;
 {% endfor %}
 
@@ -225,7 +225,7 @@
 {% for collectData in collectData_all %}
 &lt;p&gt;
   &lt;i&gt;collectData {{ collectData.value }}:&lt;/i&gt;
-  {% render_set_value_list collectData &apos;qa/collectionPhase/metadataUsage/metadataExtraction&apos; %}
+  {% render_set_value collectData &apos;qa/collectionPhase/metadataUsage/metadataExtraction&apos; %}
 &lt;/p&gt;
 {% endfor %}
 
@@ -237,7 +237,7 @@
 {% for collectData in collectData_all %}
 &lt;p&gt;
   &lt;i&gt;collectData {{ collectData.value }}:&lt;/i&gt;
-  {% render_set_value_list collectData &apos;qa/collectionPhase/metadataUsage/dataQualityExtraction&apos; %}
+  {% render_set_value collectData &apos;qa/collectionPhase/metadataUsage/dataQualityExtraction&apos; %}
 &lt;/p&gt;
 {% endfor %}
 
@@ -252,7 +252,7 @@
 {% for collectData in collectData_all %}
 &lt;p&gt;
   &lt;i&gt;collectData {{ collectData.value }}:&lt;/i&gt;
-  {% render_set_value_list collectData &apos;qa/collectionPhase/metadataEnriching/enrichMetadataYesNo&apos; %}
+  {% render_set_value collectData &apos;qa/collectionPhase/metadataEnriching/enrichMetadataYesNo&apos; %}
 &lt;/p&gt;
 {% endfor %}
 
@@ -279,7 +279,7 @@
 {% for collectData in collectData_all %}
 &lt;p&gt;
   &lt;i&gt;collectData {{ collectData.value }}:&lt;/i&gt;
-  {% render_set_value_list collectData &apos;qa/collectionPhase/qualityControl/qualityControlDecision&apos; %}
+  {% render_set_value collectData &apos;qa/collectionPhase/qualityControl/qualityControlDecision&apos; %}
 &lt;/p&gt;
 {% endfor %}
 
@@ -326,7 +326,7 @@
 {% for collectData in collectData_all %}
 &lt;p&gt;
   &lt;i&gt;collectData {{ collectData.value }}:&lt;/i&gt;
-  {% render_set_value_list collectData &apos;qa/collectionPhase/qualityControl/evaluateFitnessForPurposeInMetadata&apos; %}
+  {% render_set_value collectData &apos;qa/collectionPhase/qualityControl/evaluateFitnessForPurposeInMetadata&apos; %}
 &lt;/p&gt;
 {% endfor %}
 
@@ -341,7 +341,7 @@
 {% for collectData in collectData_all %}
 &lt;p&gt;
   &lt;i&gt;collectData {{ collectData.value }}:&lt;/i&gt;
-  {% render_set_value_list collectData &apos;qa/collectionPhase/dataMaturityHandling/dataMaturityEvaluation&apos; %}
+  {% render_set_value collectData &apos;qa/collectionPhase/dataMaturityHandling/dataMaturityEvaluation&apos; %}
 &lt;/p&gt;
 {% endfor %}
 
@@ -353,7 +353,7 @@
 {% for collectData in collectData_all %}
 &lt;p&gt;
   &lt;i&gt;collectData {{ collectData.value }}:&lt;/i&gt;
-  {% render_set_value_list collectData &apos;qa/collectionPhase/dataMaturityHandling/dataMaturityEvaluationInMetadata&apos; %}
+  {% render_set_value collectData &apos;qa/collectionPhase/dataMaturityHandling/dataMaturityEvaluationInMetadata&apos; %}
 &lt;/p&gt;
 {% endfor %}
 
@@ -365,7 +365,7 @@
   &lt;i&gt;In the case of proceeding to processing phase, DM4processing and DQ4processing must be fulfilled. If the data shall be directly published (e.g. own measurements) DM4publication and DQ4publication must be met.&lt;/i&gt;
 &lt;/p&gt;
 &lt;p&gt;
-  {% render_value_list &apos;qa/collectionPhase/nextSteps/DMDQIndicators&apos; %}
+  {% render_value &apos;qa/collectionPhase/nextSteps/DMDQIndicators&apos; %}
 &lt;/p&gt;
 
   &lt;h2&gt;Processing Phase&lt;/h2&gt;
@@ -395,7 +395,7 @@
 {% for processData in processData_all %}
 &lt;p&gt;
   &lt;i&gt;processData {{ processData.value }}:&lt;/i&gt;
-  {% render_set_value_list processData &apos;qa/processingPhase/processData/metadataExtraction&apos; %}
+  {% render_set_value processData &apos;qa/processingPhase/processData/metadataExtraction&apos; %}
 &lt;/p&gt;
 {% endfor %}
 
@@ -407,7 +407,7 @@
 {% for processData in processData_all %}
 &lt;p&gt;
   &lt;i&gt;processData {{ processData.value }}:&lt;/i&gt;
-  {% render_set_value_list processData &apos;qa/processingPhase/processData/dataQualityExtraction&apos; %}
+  {% render_set_value processData &apos;qa/processingPhase/processData/dataQualityExtraction&apos; %}
 &lt;/p&gt;
 {% endfor %}
 
@@ -422,7 +422,7 @@
 {% for processData in processData_all %}
 &lt;p&gt;
   &lt;i&gt;processData {{ processData.value }}:&lt;/i&gt;
-  {% render_set_value_list processData &apos;qa/processingPhase/metadataEnriching/enrichMetadataYesNo&apos; %}
+  {% render_set_value processData &apos;qa/processingPhase/metadataEnriching/enrichMetadataYesNo&apos; %}
 &lt;/p&gt;
 {% endfor %}
 
@@ -449,7 +449,7 @@
 {% for processData in processData_all %}
 &lt;p&gt;
   &lt;i&gt;processData {{ processData.value }}:&lt;/i&gt;
-  {% render_set_value_list processData &apos;qa/processingPhase/qualityControl/qualityControlDecision&apos; %}
+  {% render_set_value processData &apos;qa/processingPhase/qualityControl/qualityControlDecision&apos; %}
 &lt;/p&gt;
 {% endfor %}
 
@@ -499,7 +499,7 @@
 {% for processData in processData_all %}
 &lt;p&gt;
   &lt;i&gt;processData {{ processData.value }}:&lt;/i&gt;
-  {% render_set_value_list processData &apos;qa/processingPhase/dataMaturityHandling/dataMaturityEvaluation&apos; %}
+  {% render_set_value processData &apos;qa/processingPhase/dataMaturityHandling/dataMaturityEvaluation&apos; %}
 &lt;/p&gt;
 {% endfor %}
 
@@ -511,7 +511,7 @@
 {% for processData in processData_all %}
 &lt;p&gt;
   &lt;i&gt;processData {{ processData.value }}:&lt;/i&gt;
-  {% render_set_value_list processData &apos;qa/processingPhase/dataMaturityHandling/dataMaturityEvaluationInMetadata&apos; %}
+  {% render_set_value processData &apos;qa/processingPhase/dataMaturityHandling/dataMaturityEvaluationInMetadata&apos; %}
 &lt;/p&gt;
 {% endfor %}
 
@@ -523,7 +523,7 @@
   &lt;i&gt;In order to proceed to the analysis phase DM4analysis and DQ4analysis must be fulfilled.&lt;/i&gt;
 &lt;/p&gt;
 &lt;p&gt;
-  {% render_value_list &apos;qa/processingPhase/nextSteps/DMDQIndicators&apos; %}
+  {% render_value &apos;qa/processingPhase/nextSteps/DMDQIndicators&apos; %}
 &lt;/p&gt;
 
   &lt;h2&gt;Analysis Phase&lt;/h2&gt;
@@ -566,7 +566,7 @@
 {% for processData in processData_all %}
 &lt;p&gt;
   &lt;i&gt;processData {{ processData.value }}:&lt;/i&gt;
-  {% render_set_value_list processData &apos;qa/analysisPhase/evaluateFitnessForPurpose/evaluateFitnessForPurposeInMetadata&apos; %}
+  {% render_set_value processData &apos;qa/analysisPhase/evaluateFitnessForPurpose/evaluateFitnessForPurposeInMetadata&apos; %}
 &lt;/p&gt;
 {% endfor %}
 
@@ -581,7 +581,7 @@
 {% for processData in processData_all %}
 &lt;p&gt;
   &lt;i&gt;processData {{ processData.value }}:&lt;/i&gt;
-  {% render_set_value_list processData &apos;qa/analysisPhase/qualityControl/qualityControlDecision&apos; %}
+  {% render_set_value processData &apos;qa/analysisPhase/qualityControl/qualityControlDecision&apos; %}
 &lt;/p&gt;
 {% endfor %}
 
@@ -628,7 +628,7 @@
 {% for processData in processData_all %}
 &lt;p&gt;
   &lt;i&gt;processData {{ processData.value }}:&lt;/i&gt;
-  {% render_set_value_list processData &apos;qa/analysisPhase/qualityControl/evaluateFitnessForPurposeInMetadata&apos; %}
+  {% render_set_value processData &apos;qa/analysisPhase/qualityControl/evaluateFitnessForPurposeInMetadata&apos; %}
 &lt;/p&gt;
 {% endfor %}
 
@@ -643,7 +643,7 @@
 {% for processData in processData_all %}
 &lt;p&gt;
   &lt;i&gt;processData {{ processData.value }}:&lt;/i&gt;
-  {% render_set_value_list processData &apos;qa/analysisPhase/dataMaturityHandling/dataMaturityEvaluation&apos; %}
+  {% render_set_value processData &apos;qa/analysisPhase/dataMaturityHandling/dataMaturityEvaluation&apos; %}
 &lt;/p&gt;
 {% endfor %}
 
@@ -655,7 +655,7 @@
 {% for processData in processData_all %}
 &lt;p&gt;
   &lt;i&gt;processData {{ processData.value }}:&lt;/i&gt;
-  {% render_set_value_list processData &apos;qa/analysisPhase/dataMaturityHandling/dataMaturityEvaluationInMetadata&apos; %}
+  {% render_set_value processData &apos;qa/analysisPhase/dataMaturityHandling/dataMaturityEvaluationInMetadata&apos; %}
 &lt;/p&gt;
 {% endfor %}
 
@@ -667,7 +667,7 @@
   &lt;i&gt;In order to proceed to the publication phase DM4publication and DQ4publication must be fulfilled.&lt;/i&gt;
 &lt;/p&gt;
 &lt;p&gt;
-  {% render_value_list &apos;qa/analysisPhase/nextSteps/DMDQIndicators&apos; %}
+  {% render_value &apos;qa/analysisPhase/nextSteps/DMDQIndicators&apos; %}
 &lt;/p&gt;
 
   &lt;h2&gt;Publication Phase&lt;/h2&gt;
@@ -685,7 +685,7 @@
 {% for publishData in publishData_all %}
 &lt;p&gt;
   &lt;i&gt;publishData {{ publishData.value }}:&lt;/i&gt;
-  {% render_set_value_list publishData &apos;qa/publicationPhase/publishData/open4publication&apos; %}
+  {% render_set_value publishData &apos;qa/publicationPhase/publishData/open4publication&apos; %}
 &lt;/p&gt;
 {% endfor %}
 
@@ -721,7 +721,7 @@
 {% for publishData in publishData_all %}
 &lt;p&gt;
   &lt;i&gt;publishData {{ publishData.value }}:&lt;/i&gt;
-  {% render_set_value_list publishData &apos;qa/publicationPhase/publishData/metadataAdaption&apos; %}
+  {% render_set_value publishData &apos;qa/publicationPhase/publishData/metadataAdaption&apos; %}
 &lt;/p&gt;
 {% endfor %}
 
@@ -732,7 +732,7 @@
 {% for publishData in publishData_all %}
 &lt;p&gt;
   &lt;i&gt;publishData {{ publishData.value }}:&lt;/i&gt;
-  {% render_set_value_list publishData &apos;qa/publicationPhase/publishData/publicationOfData&apos; %}
+  {% render_set_value publishData &apos;qa/publicationPhase/publishData/publicationOfData&apos; %}
 &lt;/p&gt;
 {% endfor %}
 
@@ -744,7 +744,7 @@
   &lt;i&gt;In order to proceed to the archiving phase DM4archiving and DQ4archiving must be fulfilled.&lt;/i&gt;
 &lt;/p&gt;
 &lt;p&gt;
-  {% render_value_list &apos;qa/publicationPhase/nextSteps/DMDQIndicators&apos; %}
+  {% render_value &apos;qa/publicationPhase/nextSteps/DMDQIndicators&apos; %}
 &lt;/p&gt;
 
   &lt;h2&gt;Archiving Phase&lt;/h2&gt;
@@ -760,7 +760,7 @@
 {% for publishData in publishData_all %}
 &lt;p&gt;
   &lt;i&gt;publishData {{ publishData.value }}:&lt;/i&gt;
-  {% render_set_value_list publishData &apos;qa/archivingPhase/archiveData/open4archiving&apos; %}
+  {% render_set_value publishData &apos;qa/archivingPhase/archiveData/open4archiving&apos; %}
 &lt;/p&gt;
 {% endfor %}
 
@@ -796,7 +796,7 @@
 {% for publishData in publishData_all %}
 &lt;p&gt;
   &lt;i&gt;publishData {{ publishData.value }}:&lt;/i&gt;
-  {% render_set_value_list publishData &apos;qa/archivingPhase/archiveData/metadataAdaption&apos; %}
+  {% render_set_value publishData &apos;qa/archivingPhase/archiveData/metadataAdaption&apos; %}
 &lt;/p&gt;
 {% endfor %}
 
@@ -807,7 +807,7 @@
 {% for publishData in publishData_all %}
 &lt;p&gt;
   &lt;i&gt;publishData {{ publishData.value }}:&lt;/i&gt;
-  {% render_set_value_list publishData &apos;qa/archivingPhase/archiveData/archivingOfData&apos; %}
+  {% render_set_value publishData &apos;qa/archivingPhase/archiveData/archivingOfData&apos; %}
 &lt;/p&gt;
 {% endfor %}
     </template>

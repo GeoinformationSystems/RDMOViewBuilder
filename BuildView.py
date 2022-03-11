@@ -117,6 +117,8 @@ def create_view(catalog_file, outfiles):
 
                 if child.find("is_collection").text.lower() == 'true':
                     question_is_collection = True
+                else:
+                    question_is_collection = False
 
                 question_attribute = child.find("attribute").attrib
                 question_attribute_value = question_attribute['{' + ns['dc'] + '}uri']
