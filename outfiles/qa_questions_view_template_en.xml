@@ -162,14 +162,14 @@
   &lt;h2&gt;Collection Phase&lt;/h2&gt;
 
   &lt;h3&gt;Data Provider: Collect Data&lt;/h3&gt;
-  &lt;i&gt;The collection of data is the first step in the data life cycle. Please specify one or multiple datasets to be collected. A dataset is not necessarily one file only. It is possible and advised to aggregate similar types of input data if they share general properties (e.g. source, license)&lt;/i&gt;
+  &lt;i&gt;The collection of data is described in the first phase of the data life cycle. Please specify one or multiple datasets that will be (potentially) collected. A dataset can include several files with common characteristics, such as sources or license.&lt;/i&gt;
 
 {% get_set &apos;qa/collectionPhase/collectData&apos; as collectData_all %}
 
 &lt;p&gt;
   &lt;br&gt;
   &lt;b&gt;How and where do you collect data?&lt;/b&gt;
-  &lt;i&gt;Describe the sources of collected data. Possible sources are repositories, public authorities, project partners, or own measurements/observations.&lt;/i&gt;
+  &lt;i&gt;Please describe the sources of the collected data by referencing the related repository or data provider.&lt;/i&gt;
 &lt;/p&gt;
 {% for collectData in collectData_all %}
 &lt;p&gt;
@@ -180,8 +180,8 @@
 
 &lt;p&gt;
   &lt;br&gt;
-  &lt;b&gt;Is the openness for data usage according to Open4usage criteria ensured?&lt;/b&gt;
-  &lt;i&gt;The collected dataset must be usable as defined in Open4usage. If the license does not allow usage, the dataset must be omitted.&lt;/i&gt;
+  &lt;b&gt;Did you ensure the openness for data usage according to the Open4usage criteria?&lt;/b&gt;
+  &lt;i&gt;The collected dataset has to be usable as defined in Open4usage. If the license does not allow usage, you should use another dataset with a proper license.&lt;/i&gt;
 &lt;/p&gt;
 {% for collectData in collectData_all %}
 &lt;p&gt;
@@ -192,8 +192,8 @@
 
 &lt;p&gt;
   &lt;br&gt;
-  &lt;b&gt;Is the data quality for data usage ensured?&lt;/b&gt;
-  &lt;i&gt;The quality of the dataset must fulfil DQ4usage criteria. If the quality is not sufficient, the dataset must be omitted.&lt;/i&gt;
+  &lt;b&gt;Did you ensure the data quality for data usage?&lt;/b&gt;
+  &lt;i&gt;The quality of the dataset has to fulfil DQ4usage criteria. If the quality does not meet the requirement, or is not described in such way that can be used to evaluate, the dataset must be omitted.&lt;/i&gt;
 &lt;/p&gt;
 {% for collectData in collectData_all %}
 &lt;p&gt;
@@ -205,7 +205,7 @@
 &lt;p&gt;
   &lt;br&gt;
   &lt;b&gt;Is metadata available?&lt;/b&gt;
-  &lt;i&gt;If metadata (data about data) is available, it can be used to a better understanding of the dataset. often it is crucial for further usage of the dataset.&lt;/i&gt;
+  &lt;i&gt;Metadata are core for the evaluation and interpretation of a dataset.&lt;/i&gt;
 &lt;/p&gt;
 {% for collectData in collectData_all %}
 &lt;p&gt;
@@ -752,15 +752,17 @@
   &lt;h3&gt;Data Publisher: Archive Data&lt;/h3&gt;
   &lt;i&gt;The archiving of data is the fifth step in the data life cycle. The same datasets are used for publication and archiving phases. A dataset is not necessarily one file only. It is possible and advised to aggregate similar types of data to be publication and/or archived if they share general properties (e.g. topic, type)&lt;/i&gt;
 
+{% get_set &apos;qa/archivingPhase/archiveData&apos; as archiveData_all %}
+
 &lt;p&gt;
   &lt;br&gt;
   &lt;b&gt;Is Open4archiving ensured?&lt;/b&gt;
   &lt;i&gt;Ensured Open4archiving is mandatory for publishing the dataset.&lt;/i&gt;
 &lt;/p&gt;
-{% for publishData in publishData_all %}
+{% for archiveData in archiveData_all %}
 &lt;p&gt;
-  &lt;i&gt;publishData {{ publishData.value }}:&lt;/i&gt;
-  {% render_set_value publishData &apos;qa/archivingPhase/archiveData/open4archiving&apos; %}
+  &lt;i&gt;archiveData {{ archiveData.value }}:&lt;/i&gt;
+  {% render_set_value archiveData &apos;qa/archivingPhase/archiveData/open4archiving&apos; %}
 &lt;/p&gt;
 {% endfor %}
 
@@ -769,10 +771,10 @@
   &lt;b&gt;How and where do you archive the dataset?&lt;/b&gt;
   &lt;i&gt;The way of archiving defines necessary metadata fields and file formats.&lt;/i&gt;
 &lt;/p&gt;
-{% for publishData in publishData_all %}
+{% for archiveData in archiveData_all %}
 &lt;p&gt;
-  &lt;i&gt;publishData {{ publishData.value }}:&lt;/i&gt;
-  {% render_set_value_list publishData &apos;qa/archivingPhase/archiveData/archivingOfDataDescription&apos; %}
+  &lt;i&gt;archiveData {{ archiveData.value }}:&lt;/i&gt;
+  {% render_set_value_list archiveData &apos;qa/archivingPhase/archiveData/archivingOfDataDescription&apos; %}
 &lt;/p&gt;
 {% endfor %}
 
@@ -781,10 +783,10 @@
   &lt;b&gt;Describe the necessary adaption of metadata elements.&lt;/b&gt;
   &lt;i&gt;Archiving of datasets in repositories often leads to repository-specific metadata elements.&lt;/i&gt;
 &lt;/p&gt;
-{% for publishData in publishData_all %}
+{% for archiveData in archiveData_all %}
 &lt;p&gt;
-  &lt;i&gt;publishData {{ publishData.value }}:&lt;/i&gt;
-  {% render_set_value_list publishData &apos;qa/archivingPhase/archiveData/metadataAdaptionYesno&apos; %}
+  &lt;i&gt;archiveData {{ archiveData.value }}:&lt;/i&gt;
+  {% render_set_value_list archiveData &apos;qa/archivingPhase/archiveData/metadataAdaptionYesno&apos; %}
 &lt;/p&gt;
 {% endfor %}
 
@@ -793,10 +795,10 @@
   &lt;b&gt;Did you adapt metadata elements?&lt;/b&gt;
   &lt;i&gt;Is the adaption of metadata elements according to the specific needs of the repository finished?&lt;/i&gt;
 &lt;/p&gt;
-{% for publishData in publishData_all %}
+{% for archiveData in archiveData_all %}
 &lt;p&gt;
-  &lt;i&gt;publishData {{ publishData.value }}:&lt;/i&gt;
-  {% render_set_value publishData &apos;qa/archivingPhase/archiveData/metadataAdaption&apos; %}
+  &lt;i&gt;archiveData {{ archiveData.value }}:&lt;/i&gt;
+  {% render_set_value archiveData &apos;qa/archivingPhase/archiveData/metadataAdaption&apos; %}
 &lt;/p&gt;
 {% endfor %}
 
@@ -804,10 +806,10 @@
   &lt;br&gt;
   &lt;b&gt;Did you archive the dataset?&lt;/b&gt;
 &lt;/p&gt;
-{% for publishData in publishData_all %}
+{% for archiveData in archiveData_all %}
 &lt;p&gt;
-  &lt;i&gt;publishData {{ publishData.value }}:&lt;/i&gt;
-  {% render_set_value publishData &apos;qa/archivingPhase/archiveData/archivingOfData&apos; %}
+  &lt;i&gt;archiveData {{ archiveData.value }}:&lt;/i&gt;
+  {% render_set_value archiveData &apos;qa/archivingPhase/archiveData/archivingOfData&apos; %}
 &lt;/p&gt;
 {% endfor %}
     </template>
