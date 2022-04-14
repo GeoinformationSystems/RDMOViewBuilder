@@ -1,11 +1,11 @@
 # RDMOViewBuilder
 RDMOViewBuilder offers a small tool to build a view to be imported in RDMO. The view takes a catalog xml file as input,
-e.g. from RDMOCatalogBuilder.
+e.g. generated with the [RDMOCatalogBuilder](https://github.com/GeoinformationSystems/RDMOCatalogBuilder).
 
 ## Usage
 To use RDMOViewBuilder type the following:
 
-```
+```python
 import BuildView
 BuildView.control_create_view("infiles/qa_questions.xml", en="outfiles/qa_questions_view_template_en.xml")
 ```
