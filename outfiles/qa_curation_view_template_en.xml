@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdmo created="2022-05-26T10:11:11.919603+02:00" xmlns:dc="http://purl.org/dc/elements/1.1/">
+	<view dc:uri="https://geokur.geo.tu-dresden.de/terms/views/qa_curation">
+		<uri_prefix>https://geokur.geo.tu-dresden.de/terms</uri_prefix>
+		<key>qa_curation</key>
+		<dc:comment/>
+		<title lang="en">Curation Guidance</title>
+		<help lang="en"/>
+		<title lang="de">Kurationshilfe</title>
+		<help lang="de"/>
+		<catalogs>
+			<catalog dc:uri="https://geokur.geo.tu-dresden.de/terms/questions/qa"/>
+		</catalogs>
+		<template>{% load view_tags %}
+
+&lt;h1&gt;Curation Guidance&lt;/h1&gt;
+&lt;p&gt;This document was created {% now &quot;SHORT_DATETIME_FORMAT&quot; %}&lt;/p&gt;
+
+&lt;h2&gt;Prerequisites&lt;/h2&gt;
+
+&lt;h3&gt;Definitions by Data Provider&lt;/h3&gt;
+
+&lt;p&gt;
+{% get_value 'qa/prerequisites/data_provider_definitions/open4usage_license' as val %}
+{% if val.is_empty %}
+  &lt;b&gt;Open4usage definition is still open.&lt;/b&gt;
+{% else %}
+  Open4usage is defined as: 
+  &lt;i&gt;{% render_value 'qa/prerequisites/data_provider_definitions/open4usage_license' %}&lt;/i&gt;
+{% endif %}
+&lt;br&gt;
+{% get_value 'qa/prerequisites/data_provider_definitions/open4usage_fivestars' as val %}
+{% if val.is_empty %}
+  &lt;b&gt;Berners-Lee five stars selection for Open4usage is still open.&lt;/b&gt;
+{% else %}
+  Berners-Lee five stars for Open4usage is defined as: 
+  &lt;i&gt;{% render_value 'qa/prerequisites/data_provider_definitions/open4usage_fivestars' %}&lt;/i&gt;
+{% endif %}
+&lt;br&gt;
+{% get_value 'qa/prerequisites/data_provider_definitions/dq4usage' as val %}
+{% if val.is_empty %}
+  &lt;b&gt;DQ4usage definition is still open.&lt;/b&gt;
+{% else %}
+  {% get_values 'qa/prerequisites/data_provider_definitions/dq4usage' set_index=0 as text %}
+  DQ4usage is defined as:
+  {% for value in text %}
+    &lt;br&gt;&lt;i&gt;&amp;nbsp;&amp;nbsp;{{value.value}}&lt;/i&gt;
+  {% endfor %}
+{% endif %}
+&lt;/p&gt;
+
+&lt;h3&gt;Definitions by Data Curator&lt;/h3&gt;
+&lt;p&gt;
+{% get_value 'qa/prerequisites/data_curator_definitions/dm4processing' as val %}
+{% if val.is_empty %}
+  &lt;b&gt;DM4processing definition is still open.&lt;/b&gt;
+{% else %}
+  {% get_values 'qa/prerequisites/data_curator_definitions/dm4processing' set_index=0 as text %}
+  DM4processing is defined as:
+  {% for value in text %}
+    &lt;br&gt;&lt;i&gt;&amp;nbsp;&amp;nbsp;{{value.value}}&lt;/i&gt;
+  {% endfor %}
+{% endif %}
+&lt;br&gt;
+{% get_value 'qa/prerequisites/data_curator_definitions/dq4processing' as val %}
+{% if val.is_empty %}
+  &lt;b&gt;DQ4processing definition is still open.&lt;/b&gt;
+{% else %}
+  {% get_values 'qa/prerequisites/data_curator_definitions/dq4processing' set_index=0 as text %}
+  DQ4processing is defined as:
+  {% for value in text %}
+    &lt;br&gt;&lt;i&gt;&amp;nbsp;&amp;nbsp;{{value.value}}&lt;/i&gt;
+  {% endfor %}
+{% endif %}
+&lt;br&gt;
+{% get_value 'qa/prerequisites/data_curator_definitions/dm4analysis' as val %}
+{% if val.is_empty %}
+  &lt;b&gt;DM4analysis definition is still open.&lt;/b&gt;
+{% else %}
+  {% get_values 'qa/prerequisites/data_curator_definitions/dm4analysis' set_index=0 as text %}
+  DM4analysis is defined as:
+  {% for value in text %}
+    &lt;br&gt;&lt;i&gt;&amp;nbsp;&amp;nbsp;{{value.value}}&lt;/i&gt;
+  {% endfor %}
+{% endif %}
+&lt;br&gt;
+{% get_value 'qa/prerequisites/data_curator_definitions/dq4analysis' as val %}
+{% if val.is_empty %}
+  &lt;b&gt;DQ4analysis definition is still open.&lt;/b&gt;
+{% else %}
+  {% get_values 'qa/prerequisites/data_curator_definitions/dq4analysis' set_index=0 as text %}
+  DQ4analysis is defined as:
+  {% for value in text %}
+    &lt;br&gt;&lt;i&gt;&amp;nbsp;&amp;nbsp;{{value.value}}&lt;/i&gt;
+  {% endfor %}
+{% endif %}
+&lt;/p&gt;
+
+&lt;h3&gt;Definitions by Data Publisher&lt;/h3&gt;
+&lt;p&gt;
+{% get_value 'qa/prerequisites/data_publisher_definitions/dm4publication' as val %}
+{% if val.is_empty %}
+  &lt;b&gt;DM4publication definition is still open.&lt;/b&gt;
+{% else %}
+  {% get_values 'qa/prerequisites/data_publisher_definitions/dm4publication' set_index=0 as text %}
+  DM4publication is defined as:
+  {% for value in text %}
+    &lt;br&gt;&lt;i&gt;&amp;nbsp;&amp;nbsp;{{value.value}}&lt;/i&gt;
+  {% endfor %}
+{% endif %}
+&lt;br&gt;
+{% get_value 'qa/prerequisites/data_publisher_definitions/dq4publication' as val %}
+{% if val.is_empty %}
+  &lt;b&gt;DQ4publication definition is still open.&lt;/b&gt;
+{% else %}
+  {% get_values 'qa/prerequisites/data_publisher_definitions/dq4publication' set_index=0 as text %}
+  DQ4publication is defined as:
+  {% for value in text %}
+    &lt;br&gt;&lt;i&gt;&amp;nbsp;&amp;nbsp;{{value.value}}&lt;/i&gt;
+  {% endfor %}
+{% endif %}
+&lt;br&gt;
+{% get_value 'qa/prerequisites/data_publisher_definitions/open4publication_license' as val %}
+{% if val.is_empty %}
+  &lt;b&gt;Open4publication definition is still open.&lt;/b&gt;
+{% else %}
+  Open4publication is defined as:
+  &lt;i&gt;{% render_value 'qa/prerequisites/data_publisher_definitions/open4publication_license' %}&lt;/i&gt;
+{% endif %}
+&lt;br&gt;
+{% get_value 'qa/prerequisites/data_publisher_definitions/open4publication_fivestars' as val %}
+{% if val.is_empty %}
+  &lt;b&gt;Berners-Lee five stars selection for Open4publication is still open.&lt;/b&gt;
+{% else %}
+  Berners-Lee five stars for Open4publication is defined as: 
+  &lt;i&gt;{% render_value 'qa/prerequisites/data_publisher_definitions/open4publication_fivestars' %}&lt;/i&gt;
+{% endif %}
+&lt;br&gt;
+{% get_value 'qa/prerequisites/data_publisher_definitions/dm4archiving' as val %}
+{% if val.is_empty %}
+  &lt;b&gt;DM4archiving definition is still open.&lt;/b&gt;
+{% else %}
+  {% get_values 'qa/prerequisites/data_publisher_definitions/dm4archiving' set_index=0 as text %}
+  DM4archiving is defined as:
+  {% for value in text %}
+    &lt;br&gt;&lt;i&gt;&amp;nbsp;&amp;nbsp;{{value.value}}&lt;/i&gt;
+  {% endfor %}
+{% endif %}
+&lt;br&gt;
+{% get_value 'qa/prerequisites/data_publisher_definitions/dq4archiving' as val %}
+{% if val.is_empty %}
+  &lt;b&gt;DQ4archiving definition is still open.&lt;/b&gt;
+{% else %}
+  {% get_values 'qa/prerequisites/data_publisher_definitions/dq4archiving' set_index=0 as text %}
+  DQ4archiving is defined as:
+  {% for value in text %}
+    &lt;br&gt;&lt;i&gt;&amp;nbsp;&amp;nbsp;{{value.value}}&lt;/i&gt;
+  {% endfor %}
+{% endif %}
+&lt;br&gt;
+{% get_value 'qa/prerequisites/data_publisher_definitions/open4archiving_license' as val %}
+{% if val.is_empty %}
+  &lt;b&gt;Open4archiving definition is still open.&lt;/b&gt;
+{% else %}
+  Open4archiving is defined as:
+  &lt;i&gt;{% render_value 'qa/prerequisites/data_publisher_definitions/open4archiving_license' %}&lt;/i&gt;
+{% endif %}
+&lt;br&gt;
+{% get_value 'qa/prerequisites/data_publisher_definitions/open4archiving_fivestars' as val %}
+{% if val.is_empty %}
+  &lt;b&gt;Berners-Lee five stars selection for Open4archiving is still open.&lt;/b&gt;
+{% else %}
+  Berners-Lee five stars for Open4archiving is defined as: 
+  &lt;i&gt;{% render_value 'qa/prerequisites/data_publisher_definitions/open4archiving_fivestars' %}&lt;/i&gt;
+{% endif %}
+&lt;/p&gt;
+
+
+  &lt;h2&gt;Collection Phase&lt;/h2&gt;
+
+{% get_set 'qa/collectionPhase/collectData' as collectData_all %}
+
+&lt;p&gt;
+{% for collectData in collectData_all %}
+  {% get_set_value collectData 'qa/collectionPhase/metadataEnriching/enrichMetadataYesNo' as val %}
+  Collection dataset &lt;b&gt;{{ collectData.value }}&lt;/b&gt;:
+  {% if val.is_true %}
+    {% get_set_values collectData 'qa/collectionPhase/metadataEnriching/enrichMetadata' as md_set %}
+    {% if not md_set %}
+      &lt;b&gt;Metadata enriching is still open.&lt;/b&gt;
+    {% else %}
+      The following metadata is enriched by the curator role:
+      {% for metadata in md_set %}
+        &lt;br&gt;&lt;i&gt;&amp;nbsp;&amp;nbsp;{{metadata.value}}&lt;/i&gt;
+      {% endfor %}
+    {% endif %}
+  {% else %}
+    No metadata can be enriched.
+  {% endif %}
+  &lt;br&gt;
+{% endfor %}
+&lt;/p&gt;
+  
+  &lt;h3&gt;Quality Control&lt;/h3&gt;
+
+&lt;p&gt;
+{% for collectData in collectData_all %}
+  {% get_set_value collectData 'qa/collectionPhase/qualityControl/qualityControlDecision' as val %}
+  Collection dataset &lt;b&gt;{{ collectData.value }}&lt;/b&gt;:
+  {% if val.is_true %}
+    {% get_set_values collectData 'qa/collectionPhase/qualityControl/evaluateFitnessForPurposeResult' as results %}
+    {% get_set_value collectData 'qa/collectionPhase/qualityControl/evaluateFitnessForPurposeResult' as result1 %}
+    {% if not results or result1.is_empty %}
+      &lt;b&gt;Evaluation of fitness for next phase still open&lt;/b&gt;
+    {% else %}
+      The evaluation of fitness for next phase has the following results:
+      {% for result in results %}
+        &lt;br&gt;&lt;i&gt;&amp;nbsp;&amp;nbsp;{{result.value}}&lt;/i&gt;
+      {% endfor %}
+      &lt;br&gt;
+      {% get_set_value collectData 'qa/collectionPhase/qualityControl/evaluateFitnessForPurposeInMetadata' as res_in_metadata %}
+      {% if res_in_metadata.is_false %}
+        &lt;b&gt;Inlcuding indicators or other results from fitness for next phase in metadata still open.&lt;/b&gt;
+      {% else %}
+        Indicators or other results from fitness for next phase are included in metadata.
+      {% endif %}
+    {% endif %}
+  {% elif val.is_empty %}
+    &lt;b&gt;Decision about quality control still open.&lt;/b&gt;
+  {% else %}
+    No quality control necessary.
+  {% endif %}
+  &lt;br&gt;
+{% endfor %}
+&lt;/p&gt;
+
+  &lt;h3&gt;Data Maturity Handling&lt;/h3&gt;
+
+&lt;p&gt;
+{% for collectData in collectData_all %}
+  {% get_set_value collectData 'qa/collectionPhase/dataMaturityHandling/dataMaturityEvaluation' as val %}
+  Collection dataset &lt;b&gt;{{ collectData.value }}&lt;/b&gt;:
+  {% if val.is_true %}
+    {% get_set_value collectData 'qa/collectionPhase/dataMaturityHandling/dataMaturityEvaluationInMetadata' as val1 %}
+    The data maturity is evaluated
+    {% if val1.is_true %}
+      and included in metadata.
+    {% else %}
+      &lt;b&gt;, but inclusion in metadata is still open.&lt;/b&gt;
+    {% endif %}
+  {% else %}
+    &lt;b&gt;The data maturity evaluation is still open.&lt;/b&gt;
+  {% endif %}
+  &lt;br&gt;
+{% endfor %}
+&lt;/p&gt;
+
+  &lt;h3&gt;Next Steps&lt;/h3&gt;
+
+&lt;p&gt;
+{% get_value 'qa/collectionPhase/nextSteps/DMDQIndicators' as val %}
+{% if val.is_empty or val.value == &quot;Either DM4processing or DQ4processing are not fulfilled.&quot; %}
+  &lt;b&gt;Proceeding to processing phase not allowed, yet.&lt;/b&gt;
+{% else %}
+  Proceeding to processing phase allowed.
+{% endif %}
+&lt;/p&gt;
+
+
+  &lt;h2&gt;Processing Phase&lt;/h2&gt;
+
+{% get_set 'qa/processingPhase/processData' as processData_all %}
+
+&lt;p&gt;
+{% for processData in processData_all %}
+  {% get_set_value processData 'qa/processingPhase/metadataEnriching/enrichMetadataYesNo' as val %}
+  Processing dataset &lt;b&gt;{{ processData.value }}&lt;/b&gt;:
+  {% if val.is_true %}
+    {% get_set_values processData 'qa/processingPhase/metadataEnriching/enrichMetadata' as md_set %}
+    {% if not md_set %}
+      &lt;b&gt;Metadata enriching is still open.&lt;/b&gt;
+    {% else %}
+      The following metadata is enriched by the curator role:
+      {% for metadata in md_set %}
+        &lt;br&gt;&lt;i&gt;&amp;nbsp;&amp;nbsp;{{metadata.value}}&lt;/i&gt;
+      {% endfor %}
+    {% endif %}
+  {% else %}
+    No metadata can be enriched.
+  {% endif %}
+  &lt;br&gt;
+{% endfor %}
+&lt;/p&gt;
+
+  &lt;h3&gt;Quality Control&lt;/h3&gt;
+
+&lt;p&gt;
+{% for processData in processData_all %}
+  {% get_set_value processData 'qa/processingPhase/qualityControl/qualityControlDecision' as val %}
+  Collection dataset &lt;b&gt;{{ processData.value }}&lt;/b&gt;:
+  {% if val.is_true %}
+    {% get_set_values processData 'qa/processingPhase/qualityControl/evaluateFitnessForPurposeResult' as results %}
+    {% get_set_value processData 'qa/processingPhase/qualityControl/evaluateFitnessForPurposeResult' as result1 %}
+    {% if not results or result1.is_empty %}
+      &lt;b&gt;Evaluation of fitness for next phase still open&lt;/b&gt;
+    {% else %}
+      The evaluation of fitness for next phase has the following results:
+      {% for result in results %}
+        &lt;br&gt;&lt;i&gt;&amp;nbsp;&amp;nbsp;{{result.value}}&lt;/i&gt;
+      {% endfor %}
+      &lt;br&gt;
+    {% endif %}
+  {% elif val.is_empty %}
+    &lt;b&gt;Decision about quality control still open.&lt;/b&gt;
+  {% else %}
+    No quality control necessary.
+  {% endif %}
+  &lt;br&gt;
+{% endfor %}
+&lt;/p&gt;
+
+  &lt;h3&gt;Data Maturity Handling&lt;/h3&gt;
+
+&lt;p&gt;
+{% for processData in processData_all %}
+  {% get_set_value processData 'qa/processingPhase/dataMaturityHandling/dataMaturityEvaluation' as val %}
+  Collection dataset &lt;b&gt;{{ processData.value }}&lt;/b&gt;:
+  {% if val.is_true %}
+    {% get_set_value processData 'qa/processingPhase/dataMaturityHandling/dataMaturityEvaluationInMetadata' as val1 %}
+    The data maturity is evaluated
+    {% if val1.is_true %}
+      and included in metadata.
+    {% else %}
+      &lt;b&gt;, but inclusion in metadata is still open.&lt;/b&gt;
+    {% endif %}
+  {% else %}
+    &lt;b&gt;The data maturity evaluation is still open.&lt;/b&gt;
+  {% endif %}
+{% endfor %}
+&lt;/p&gt;
+
+  &lt;h3&gt;Next Steps&lt;/h3&gt;
+
+&lt;p&gt;
+{% get_value 'qa/processingPhase/nextSteps/DMDQIndicators' as val %}
+{% if val.is_empty or val.value == &quot;Either DM4analysis or DQ4analysis are not fulfilled.&quot; %}
+  &lt;b&gt;Proceeding to analysis phase not allowed, yet.&lt;/b&gt;
+{% else %}
+  Proceeding to analysis phase allowed.
+{% endif %}
+&lt;/p&gt;
+
+
+  &lt;h2&gt;Analysis Phase&lt;/h2&gt;
+  
+  &lt;h3&gt;Quality Control&lt;/h3&gt;
+
+&lt;p&gt;
+{% for processData in processData_all %}
+  {% get_set_value processData 'qa/analysisPhase/qualityControl/qualityControlDecision' as val %}
+  Collection dataset &lt;b&gt;{{ processData.value }}&lt;/b&gt;:
+  {% if val.is_true %}
+    {% get_set_values processData 'qa/analysisPhase/qualityControl/evaluateFitnessForPurposeResult' as results %}
+    {% get_set_value processData 'qa/analysisPhase/qualityControl/evaluateFitnessForPurposeResult' as result1 %}
+    {% if not results or result1.is_empty %}
+      &lt;b&gt;Evaluation of fitness for next phase still open&lt;/b&gt;
+    {% else %}
+      The evaluation of fitness for next phase has the following results:
+      {% for result in results %}
+        &lt;br&gt;&lt;i&gt;&amp;nbsp;&amp;nbsp;{{result.value}}&lt;/i&gt;
+      {% endfor %}
+      &lt;br&gt;
+      {% get_set_value processData 'qa/analysisPhase/qualityControl/evaluateFitnessForPurposeInMetadata' as res_in_metadata %}
+      {% if res_in_metadata.is_false %}
+        &lt;b&gt;Inlcuding indicators or other results from fitness for next phase in metadata still open.&lt;/b&gt;
+      {% else %}
+        Indicators or other results from fitness for next phase are included in metadata.
+      {% endif %}
+    {% endif %}
+  {% elif val.is_empty %}
+    &lt;b&gt;Decision about quality control still open.&lt;/b&gt;
+  {% else %}
+    No quality control necessary.
+  {% endif %}
+  &lt;br&gt;
+{% endfor %}
+&lt;/p&gt;
+
+  &lt;h3&gt;Data Maturity Handling&lt;/h3&gt;
+
+&lt;p&gt;
+{% for processData in processData_all %}
+  {% get_set_value processData 'qa/analysisPhase/dataMaturityHandling/dataMaturityEvaluation' as val %}
+  Collection dataset &lt;b&gt;{{ processData.value }}&lt;/b&gt;:
+  {% if val.is_true %}
+    {% get_set_value processData 'qa/analysisPhase/dataMaturityHandling/dataMaturityEvaluationInMetadata' as val1 %}
+    The data maturity is evaluated
+    {% if val1.is_true %}
+      and included in metadata.
+    {% else %}
+      &lt;b&gt;, but inclusion in metadata is still open.&lt;/b&gt;
+    {% endif %}
+  {% else %}
+    &lt;b&gt;The data maturity evaluation is still open.&lt;/b&gt;
+  {% endif %}
+{% endfor %}
+&lt;/p&gt;
+
+  &lt;h3&gt;Next Steps&lt;/h3&gt;
+
+&lt;p&gt;
+{% get_value 'qa/analysisPhase/nextSteps/DMDQIndicators' as val %}
+{% if val.is_empty or val.value == &quot;Either DM4publication or DQ4publication are not fulfilled.&quot; %}
+  &lt;b&gt;Proceeding to publication phase not allowed, yet.&lt;/b&gt;
+{% else %}
+  Proceeding to publication phase allowed.
+{% endif %}
+&lt;/p&gt;</template>
+	</view>
+</rdmo>
